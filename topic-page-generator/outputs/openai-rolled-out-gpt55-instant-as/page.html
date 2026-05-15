@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenAI Rolls Out GPT-5.5 Instant as Default Model in ChatGPT</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --color-bg:          #fafaf7;
+  --color-text:        #1a1a1a;
+  --color-text-muted:  #6b6b6b;
+  --color-border:      #e5e5e0;
+  --color-accent:      #8b0000;
+  --color-link:        #8b0000;
+  --color-primary:     #1a5d1a;
+  --color-corroborated:#1d4e89;
+  --color-single:      #8a6d00;
+
+  --font-serif: 'Source Serif Pro', Georgia, serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  --max-width:          720px;
+  --line-height-body:   1.65;
+  --line-height-heading:1.2;
+
+  --size-h1:     2.5rem;
+  --size-h2:     1.75rem;
+  --size-h3:     1.25rem;
+  --size-body:   1.0625rem;
+  --size-small:  0.875rem;
+  --size-caption:0.75rem;
+
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+a { color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+/* ── Top bar ──────────────────────────────────────────────────────────── */
+.topbar {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--size-caption);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+.topbar-brand {
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--size-caption);
+}
+
+/* ── Layout wrapper ───────────────────────────────────────────────────── */
+.page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-2xl);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+.hero-eyebrow .event-type {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.hero h1 {
+  font-size: var(--size-h1);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.01em;
+}
+.hero-rule {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+.hero-summary {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+.hero-meta {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+.hero-meta span + span::before { content: " · "; }
+
+/* ── Section headers ──────────────────────────────────────────────────── */
+.section {
+  margin-top: var(--space-xl);
+}
+.section-header {
+  margin-bottom: var(--space-md);
+}
+.section-header h2 {
+  font-size: var(--size-h2);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+/* ── At-a-glance 5W ──────────────────────────────────────────────────── */
+.five-w-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-lg);
+  margin-top: var(--space-md);
+}
+.five-w-item {}
+.five-w-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+.five-w-text {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+/* ── Timeline ─────────────────────────────────────────────────────────── */
+.timeline {
+  margin-top: var(--space-md);
+  position: relative;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 6rem 1.25rem 1fr;
+  gap: 0 var(--space-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+.timeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.timeline-line {
+  width: 1px;
+  background: var(--color-border);
+  flex: 1;
+  margin-top: 2px;
+}
+.timeline-item:last-child .timeline-line { display: none; }
+.timeline-content {}
+.timeline-title {
+  font-weight: 600;
+  font-size: var(--size-body);
+  margin-bottom: var(--space-xs);
+}
+.timeline-desc {
+  font-size: var(--size-small);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+}
+
+/* ── Credibility dot + label ──────────────────────────────────────────── */
+.cred {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  margin-left: var(--space-sm);
+  font-weight: 400;
+}
+.cred-primary     { color: var(--color-primary); }
+.cred-corroborated{ color: var(--color-corroborated); }
+.cred-single      { color: var(--color-single); }
+.cred-low         { color: var(--color-text-muted); }
+
+/* ── Source superscripts ──────────────────────────────────────────────── */
+sup.src-ref {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: -0.02em;
+  margin-left: 1px;
+}
+sup.src-ref a {
+  color: inherit;
+  text-decoration: none;
+}
+sup.src-ref a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ── Version comparison table ────────────────────────────────────────── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.comparison-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.comparison-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table .col-attr {
+  font-weight: 600;
+  width: 38%;
+  color: var(--color-text);
+}
+.comparison-table .col-prev {
+  width: 28%;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+}
+.comparison-table .col-new {
+  width: 28%;
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text);
+}
+.comparison-table .col-src {
+  width: 6%;
+  text-align: right;
+}
+
+/* ── Reception ────────────────────────────────────────────────────────── */
+.reception-group {
+  margin-top: var(--space-md);
+}
+.reception-group-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+.reception-item {
+  border-left: 4px solid var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.reception-item.positive { border-left-color: var(--color-primary); }
+.reception-item.critical { border-left-color: var(--color-accent); }
+.reception-group-label.positive { color: var(--color-primary); }
+.reception-group-label.critical { color: var(--color-accent); }
+.reception-quote {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+}
+.reception-attribution {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+.reception-attribution::before { content: "— "; }
+
+/* ── Schedule table ──────────────────────────────────────────────────── */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.schedule-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.schedule-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.schedule-table tr:last-child td { border-bottom: none; }
+.schedule-table .col-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  width: 18%;
+  white-space: nowrap;
+}
+.schedule-table .col-title { font-weight: 600; width: 55%; }
+.schedule-table .col-venue { color: var(--color-text-muted); width: 21%; }
+.schedule-table .col-src   { width: 6%; text-align: right; }
+
+/* ── Participants chips ──────────────────────────────────────────────── */
+.participants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.participant-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--size-small);
+}
+.participant-chip-name {
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+.participant-chip-role {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ── Live status ─────────────────────────────────────────────────────── */
+.live-status-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+}
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.live-status-text { font-weight: 500; }
+.live-update { color: var(--color-text-muted); }
+
+/* ── Background prose ────────────────────────────────────────────────── */
+.background-prose p {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  margin-top: var(--space-md);
+}
+.background-prose p:first-child { margin-top: var(--space-md); }
+
+/* ── Key entities chips ──────────────────────────────────────────────── */
+.entities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.entity-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  max-width: 340px;
+}
+.entity-chip-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: 2px;
+}
+.entity-chip-name { font-weight: 600; font-size: var(--size-small); }
+.entity-chip-type {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.entity-chip-desc {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Sources list ────────────────────────────────────────────────────── */
+.sources-list {
+  list-style: none;
+  margin-top: var(--space-md);
+}
+.sources-list li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--size-small);
+}
+.sources-list li:last-child { border-bottom: none; }
+.src-num {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+}
+.src-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.src-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+.src-tier { display: inline; }
+.src-url {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  word-break: break-all;
+  color: var(--color-text-muted);
+}
+.src-url a { color: var(--color-link); }
+
+/* ── Tier labels — primary source gets semantic green; media tiers muted ── */
+.tier-primary      { color: var(--color-primary); }
+.tier-tier1        { color: var(--color-text-muted); }
+.tier-tier2        { color: var(--color-text-muted); }
+.tier-tier3        { color: var(--color-text-muted); }
+.tier-low          { color: var(--color-text-muted); }
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .page-wrap { padding: 0 var(--space-md) var(--space-xl); }
+
+  .hero h1 { font-size: 1.75rem; }
+  .hero-summary { font-size: 1rem; }
+
+  .five-w-grid { grid-template-columns: 1fr; }
+
+  .timeline-item { grid-template-columns: 5rem 1.25rem 1fr; }
+  .timeline-date { font-size: var(--size-caption); }
+
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-xs) var(--space-sm); }
+  .comparison-table .col-prev { display: none; }
+  .comparison-table .col-attr { width: 55%; }
+  .comparison-table .col-new  { width: 38%; }
+
+  .section-header h2 { font-size: 1.375rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="topbar">
+  <span class="topbar-brand">Topic Page Generator</span>
+  <span>Generated May 15, 2026 04:30 UTC &nbsp;·&nbsp; v0.1.0</span>
+</header>
+
+<div class="page-wrap">
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <p class="hero-eyebrow">
+    <span class="event-type">PRODUCT LAUNCH</span>
+    &nbsp;·&nbsp; MAY 2026
+  </p>
+  <h1>OpenAI Rolls Out GPT-5.5 Instant as Default Model in ChatGPT</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-summary">OpenAI released GPT-5.5 Instant in May 2026, making it the new default model for all ChatGPT users. The update delivers significant improvements in factual accuracy — including a 52.5% reduction in hallucinated claims on high-stakes prompts in medicine, law, and finance — along with cleaner responses, stronger STEM performance, and enhanced personalization that draws on past chats, uploaded files, and connected Gmail accounts. The rollout began with Plus and Pro subscribers on the web, with broader access to Free, Go, Business, and Enterprise users planned for the coming weeks.</p>
+  <p class="hero-meta">
+    <span>May 15, 2026 04:30 UTC</span>
+    <span>Compiled from 12 sources</span>
+  </p>
+</section>
+
+<!-- ── At-a-glance ──────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>At a Glance</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="five-w-grid">
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHO</div>
+      <div class="five-w-text">OpenAI, led by CEO Sam Altman, developed and deployed GPT-5.5 Instant as the new default model in ChatGPT.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHAT</div>
+      <div class="five-w-text">GPT-5.5 Instant became the default ChatGPT model, featuring reduced hallucinations, more concise responses, stronger STEM and image analysis, and enhanced personalization via memory sources.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHEN</div>
+      <div class="five-w-text">The model was released on May 5, 2026, with the broader rollout to all users continuing through May 2026.<sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHERE</div>
+      <div class="five-w-text">GPT-5.5 Instant is available globally through ChatGPT on the web, with mobile access and expanded plan availability rolling out subsequently.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHY</div>
+      <div class="five-w-text">OpenAI aimed to address ChatGPT&#39;s persistent hallucination problem, improve everyday usability, and deliver more personalized, accurate responses — particularly in sensitive domains like medicine, law, and finance.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ── Timeline ─────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Timeline</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-date">2026-02</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          GPT-4o Deprecated<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup>
+        </div>
+        <div class="timeline-desc">OpenAI took GPT-4o out of service in February 2026, prompting significant user backlash — some users described the model as their &#39;best friend&#39; or &#39;a mirror&#39; and signed petitions to keep it.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">2026-04</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Broader GPT-5.5 Series Launched for Paid Users<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup>
+        </div>
+        <div class="timeline-desc">OpenAI released the broader GPT-5.5 model in late April 2026 for paid ChatGPT subscribers, highlighting improvements in coding, knowledge work, and the ability to handle complex multi-step tasks.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">2026-05-05</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          GPT-5.5 Instant Released as Default Model<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup>
+        </div>
+        <div class="timeline-desc">OpenAI released GPT-5.5 Instant, making it the new default model for logged-in ChatGPT users. The release included a 52.5% reduction in hallucinated claims on high-stakes prompts and introduced the memory sources feature on the web.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">2026-05-07</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          GPT-5.5-Cyber Rolls Out in Limited Preview<span class="cred cred-single">● single source</span><sup class="src-ref"><a href="#src-4">[4]</a></sup>
+        </div>
+        <div class="timeline-desc">OpenAI announced a limited preview of GPT-5.5-Cyber for vetted cybersecurity teams, offering a more permissive configuration for security workflows such as vulnerability identification, patch validation, and malware analysis.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">2026-05</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Rollout Expands; GPT-5.3 Given Three-Month Sunset Window<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup>
+        </div>
+        <div class="timeline-desc">The GPT-5.5 Instant update continued rolling out to all users in May 2026. OpenAI confirmed that GPT-5.3 Instant would remain available as an option for paid users for three more months before being discontinued.</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- ── Version Comparison ────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>What Changed</h2>
+    <hr class="section-divider">
+  </div>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th class="col-attr">Attribute</th>
+        <th class="col-prev">Previous</th>
+        <th class="col-new">New</th>
+        <th class="col-src">Src</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="col-attr">Default Model</td>
+        <td class="col-prev">GPT-5.3 Instant</td>
+        <td class="col-new">GPT-5.5 Instant</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Hallucination Reduction (high-stakes prompts)</td>
+        <td class="col-prev">Baseline (GPT-5.3 Instant)</td>
+        <td class="col-new">52.5% fewer false statements in medicine, law, and finance</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Inaccurate Claims in Flagged Conversations</td>
+        <td class="col-prev">Baseline (GPT-5.3 Instant)</td>
+        <td class="col-new">37.3% reduction</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">AIME 2025 Math Score</td>
+        <td class="col-prev">Not reported for GPT-5.3 Instant</td>
+        <td class="col-new">81.2</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">MMMU-Pro Multimodal Reasoning Score</td>
+        <td class="col-prev">69.2 (GPT-5.3 Instant)</td>
+        <td class="col-new">Improved (specific score not reported)</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Response Style</td>
+        <td class="col-prev">Prone to verbosity, overformatting, and excessive emoji use</td>
+        <td class="col-new">More concise, succinct, less cluttered, fewer unnecessary follow-up questions</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Personalization</td>
+        <td class="col-prev">Limited context from prior interactions</td>
+        <td class="col-new">Draws actively from past chats, saved files, and connected Gmail; memory sources feature shows users what data shaped each response</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Web Search Decision-Making</td>
+        <td class="col-prev">Less precise triggering of web search</td>
+        <td class="col-new">Better at deciding when to use web search for a given prompt</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-8">[8]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Cybersecurity Safety Classification</td>
+        <td class="col-prev">Not classified as High Capability at Instant tier</td>
+        <td class="col-new">First Instant-tier model classified as High Capability in both cybersecurity and biological/chemical preparedness</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-attr">Predecessor Availability</td>
+        <td class="col-prev">GPT-5.3 Instant as default</td>
+        <td class="col-new">GPT-5.3 Instant available as option for paid users for three months before discontinuation</td>
+        <td class="col-src"><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ── Reception ─────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Reception</h2>
+    <hr class="section-divider">
+  </div>
+  
+  <div class="reception-group">
+    <div class="reception-group-label positive">● Positive</div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"Significant improvements in factuality across the board."<sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+      <div class="reception-attribution">OpenAI, on GPT-5.5 Instant&#39;s accuracy gains</div>
+    </div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"GPT-5.5 Instant is smarter, more accurate, less cluttered in its answers, better at deciding when to search the web, stronger with image and STEM-related tasks, and more effective at using prior context from chats, files, and connected services like Gmail when personalization is enabled."<sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+      <div class="reception-attribution">OpenAI, describing GPT-5.5 Instant&#39;s capabilities</div>
+    </div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"We&#39;re going to do it."<sup class="src-ref"><a href="#src-12">[12]</a></sup></div>
+      <div class="reception-attribution">Sam Altman, OpenAI CEO, confirming plans for a GPT-5.5 launch party after asking the model what it would want for its own celebration</div>
+    </div>
+    
+  </div>
+  
+  
+  <div class="reception-group">
+    <div class="reception-group-label critical">○ Critical</div>
+    
+    <div class="reception-item critical">
+      <div class="reception-quote">"Users who signed petitions to stop OpenAI from retiring GPT-4o described the model as their &#39;best friend&#39; or &#39;a mirror.&#39;"<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></div>
+      <div class="reception-attribution">User reactions following GPT-4o&#39;s deprecation in February 2026, highlighting the challenge OpenAI faces in managing model transitions</div>
+    </div>
+    
+    <div class="reception-item critical">
+      <div class="reception-quote">"In its current iteration, the memory sources feature won&#39;t display every bit of information ChatGPT might have used to inform an answer."<sup class="src-ref"><a href="#src-3">[3]</a></sup></div>
+      <div class="reception-attribution">OpenAI, acknowledging a current limitation of the memory sources feature</div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<!-- ── Schedule ──────────────────────────────────────────────────────── -->
+
+
+<!-- ── Participants ───────────────────────────────────────────────────── -->
+
+
+<!-- ── Live Status ───────────────────────────────────────────────────── -->
+
+
+<!-- ── Background ────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Background</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="background-prose">
+    
+    <p>GPT-5.5 Instant is the latest in OpenAI&#39;s evolving lineup of ChatGPT models, positioned as the fast, everyday workhorse in a tiered family that also includes GPT-5.5 Thinking for reasoning-heavy tasks and GPT-5.5 Pro for the most demanding long-running work. The broader GPT-5.5 series was first launched in late April 2026 for paid subscribers, with improvements highlighted in coding, knowledge work, and the ability to handle complex, multi-step tasks autonomously. GPT-5.5 Instant represents the Instant-tier distillation of that broader model, optimized for low latency and everyday use while inheriting the family&#39;s core capability gains.<sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup></p>
+    
+    <p>Hallucinations — the generation of factually incorrect content — have been ChatGPT&#39;s most persistent flaw since its launch. OpenAI&#39;s decision to make hallucination reduction a centerpiece of the GPT-5.5 Instant release reflects ongoing pressure to make AI reliable in high-stakes domains. The model&#39;s predecessor, GPT-5.3 Instant, scored 69.2 on the MMMU-Pro multimodal reasoning benchmark; GPT-5.5 Instant achieved 81.2 on the AIME 2025 math test and reduced false statements by 52.5% on high-stakes prompts in medicine, law, and finance. OpenAI also noted a 37.3% reduction in inaccurate claims in conversations users had previously flagged for factual errors.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></p>
+    
+    <p>The transition from GPT-4o to newer models has not been without friction. When OpenAI deprecated GPT-4o in February 2026, users pushed back strongly — some described the model as their &#39;best friend&#39; or &#39;a mirror&#39; and signed petitions to keep it, citing its frequent affirmations and relatable personality. OpenAI has since been attentive to model personality in its rollouts, explicitly tuning GPT-5.5 Instant to be clearer and more succinct while maintaining warmth, and reducing clutter such as gratuitous emojis and excessive formatting. The company is also allowing paid users to continue using GPT-5.3 Instant for three months before it is fully discontinued.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></p>
+    
+  </div>
+</section>
+
+
+<!-- ── Key Entities ──────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Key Entities</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="entities-grid">
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">OpenAI</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">The AI company that developed and deployed GPT-5.5 Instant as the new default model in ChatGPT, rolling it out to users in May 2026.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">GPT-5.5 Instant</span>
+        <span class="entity-chip-type">product</span>
+      </div>
+      <div class="entity-chip-desc">OpenAI&#39;s new default ChatGPT model featuring reduced hallucinations, more concise responses, stronger STEM and image analysis, and enhanced personalization via memory sources.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">ChatGPT</span>
+        <span class="entity-chip-type">product</span>
+      </div>
+      <div class="entity-chip-desc">OpenAI&#39;s consumer AI chat platform, which adopted GPT-5.5 Instant as its default model in May 2026 and introduced the new memory sources feature across all models.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Sam Altman</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">CEO of OpenAI, who publicly discussed the GPT-5.5 launch at a fireside chat at Stripe Sessions and described plans to hold a launch party for the model.<sup class="src-ref"><a href="#src-12">[12]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">GPT-5.5-Cyber</span>
+        <span class="entity-chip-type">product</span>
+      </div>
+      <div class="entity-chip-desc">A specialized variant of GPT-5.5 trained to be more permissive on security-related tasks, rolled out in limited preview to vetted cybersecurity teams on May 7, 2026.<sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">GPT-5.3 Instant</span>
+        <span class="entity-chip-type">product</span>
+      </div>
+      <div class="entity-chip-desc">The predecessor to GPT-5.5 Instant, which will remain available as an option for paid users for three months before being discontinued.<sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">GPT-4o</span>
+        <span class="entity-chip-type">product</span>
+      </div>
+      <div class="entity-chip-desc">An earlier OpenAI model deprecated in February 2026, whose removal prompted significant user backlash and petitions, providing context for how OpenAI manages model transitions.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ── Sources ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Sources</h2>
+    <hr class="section-divider">
+  </div>
+  <ol class="sources-list">
+    
+    <li id="src-1">
+      <div class="src-num">1</div>
+      <div>
+        <div class="src-title">GPT-5.5 Instant System Card - OpenAI Deployment Safety Hub</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; openai.com
+          &nbsp;·&nbsp; 2026-05-05
+        </div>
+        <div class="src-url"><a href="https://deploymentsafety.openai.com/gpt-5-5-instant" target="_blank" rel="noopener">https://deploymentsafety.openai.com/gpt-5-5-instant</a></div>
+      </div>
+    </li>
+    
+    <li id="src-2">
+      <div class="src-num">2</div>
+      <div>
+        <div class="src-title">OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT | TechCrunch</div>
+        <div class="src-meta">
+          <span class="tier-tier2 src-tier">● Tier-2 media</span>
+          &nbsp;·&nbsp; techcrunch.com
+          &nbsp;·&nbsp; 2026-05-05
+        </div>
+        <div class="src-url"><a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-3">
+      <div class="src-num">3</div>
+      <div>
+        <div class="src-title">ChatGPT&#39;s new default model is more factual and better at personalization - Engadget</div>
+        <div class="src-meta">
+          <span class="tier-tier2 src-tier">● Tier-2 media</span>
+          &nbsp;·&nbsp; engadget.com
+          &nbsp;·&nbsp; 2026-05-05
+        </div>
+        <div class="src-url"><a href="https://www.engadget.com/2165298/chatgpts-new-default-model-is-more-factual-and-better-at-personalization/" target="_blank" rel="noopener">https://www.engadget.com/2165298/chatgpts-new-default-model-is-more-factual-and-better-at-personalization/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-4">
+      <div class="src-num">4</div>
+      <div>
+        <div class="src-title">OpenAI rolls out new model for cybersecurity teams a month after Anthropic&#39;s Mythos debut</div>
+        <div class="src-meta">
+          <span class="tier-tier2 src-tier">● Tier-2 media</span>
+          &nbsp;·&nbsp; cnbc.com
+          &nbsp;·&nbsp; 2026-05-07
+        </div>
+        <div class="src-url"><a href="https://www.cnbc.com/2026/05/07/openai-rolls-out-new-gpt-5point5-cyber-to-vetted-cybersecurity-teams.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/07/openai-rolls-out-new-gpt-5point5-cyber-to-vetted-cybersecurity-teams.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-5">
+      <div class="src-num">5</div>
+      <div>
+        <div class="src-title">OpenAI rolls out ChatGPT 5.5 Instant as the new default model for everyone</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; mashable.com
+          &nbsp;·&nbsp; 2026-05-05
+        </div>
+        <div class="src-url"><a href="https://mashable.com/article/openai-chatgpt-55-instant-out-now" target="_blank" rel="noopener">https://mashable.com/article/openai-chatgpt-55-instant-out-now</a></div>
+      </div>
+    </li>
+    
+    <li id="src-6">
+      <div class="src-num">6</div>
+      <div>
+        <div class="src-title">OpenAI Launches GPT-5.5 Instant as ChatGPT&#39;s New Default Model</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; tomorrowaccess.com
+          &nbsp;·&nbsp; 2026-05-09
+        </div>
+        <div class="src-url"><a href="https://tomorrowaccess.com/en/news/18772" target="_blank" rel="noopener">https://tomorrowaccess.com/en/news/18772</a></div>
+      </div>
+    </li>
+    
+    <li id="src-7">
+      <div class="src-num">7</div>
+      <div>
+        <div class="src-title">OpenAI GPT-5.5 Instant: What the New Default ChatGPT Model Changes for Accuracy, Speed, Memory, and API Users | ALM Corp</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; almcorp.com
+          &nbsp;·&nbsp; 2026-05-05
+        </div>
+        <div class="src-url"><a href="https://almcorp.com/blog/openai-gpt-5-5-instant-chatgpt-default-model/" target="_blank" rel="noopener">https://almcorp.com/blog/openai-gpt-5-5-instant-chatgpt-default-model/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-8">
+      <div class="src-num">8</div>
+      <div>
+        <div class="src-title">OpenAI replaces ChatGPT default model with GPT-5.5 Instant</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; tech.yahoo.com
+          &nbsp;·&nbsp; 2026-05-07
+        </div>
+        <div class="src-url"><a href="https://tech.yahoo.com/ai/chatgpt/articles/openai-replaces-chatgpt-default-model-133739115.html" target="_blank" rel="noopener">https://tech.yahoo.com/ai/chatgpt/articles/openai-replaces-chatgpt-default-model-133739115.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-9">
+      <div class="src-num">9</div>
+      <div>
+        <div class="src-title">GPT-5.5 Instant launches: ChatGPT&#39;s default model gets more accurate, shorter, and more personal</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; knightli.com
+          &nbsp;·&nbsp; 2026-05-07
+        </div>
+        <div class="src-url"><a href="https://www.knightli.com/en/2026/05/07/gpt-5-5-instant-chatgpt-default-model/" target="_blank" rel="noopener">https://www.knightli.com/en/2026/05/07/gpt-5-5-instant-chatgpt-default-model/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-10">
+      <div class="src-num">10</div>
+      <div>
+        <div class="src-title">OpenAI launches GPT-5.5 instant</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; thepeninsulaqatar.com
+          &nbsp;·&nbsp; 2026-05-06
+        </div>
+        <div class="src-url"><a href="https://thepeninsulaqatar.com/article/06/05/2026/openai-launches-gpt-55-instant" target="_blank" rel="noopener">https://thepeninsulaqatar.com/article/06/05/2026/openai-launches-gpt-55-instant</a></div>
+      </div>
+    </li>
+    
+    <li id="src-11">
+      <div class="src-num">11</div>
+      <div>
+        <div class="src-title">OpenAI Releases GPT-5.5 Instant for ChatGPT to Improve Factuality | MWM</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; mwm.ai
+          &nbsp;·&nbsp; 2026-05-06
+        </div>
+        <div class="src-url"><a href="https://mwm.ai/articles/openai-pushes-chatgpt-update-in-may-2026-to-reduce-ai-hallucinations" target="_blank" rel="noopener">https://mwm.ai/articles/openai-pushes-chatgpt-update-in-may-2026-to-reduce-ai-hallucinations</a></div>
+      </div>
+    </li>
+    
+    <li id="src-12">
+      <div class="src-num">12</div>
+      <div>
+        <div class="src-title">Sam Altman asked GPT-5.5 to plan its own launch party. Its requests were &#39;beautiful&#39; but &#39;strange.&#39;</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; tech.yahoo.com
+          &nbsp;·&nbsp; 2026-05-03
+        </div>
+        <div class="src-url"><a href="https://tech.yahoo.com/ai/chatgpt/articles/sam-altman-asked-gpt-5-083001955.html" target="_blank" rel="noopener">https://tech.yahoo.com/ai/chatgpt/articles/sam-altman-asked-gpt-5-083001955.html</a></div>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+</div><!-- /page-wrap -->
+</body>
+</html>

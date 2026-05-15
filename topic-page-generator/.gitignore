@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+outputs/**
+!outputs/
+!outputs/*/
+!outputs/*/page.html
+.cache/
+*.db
+.DS_Store

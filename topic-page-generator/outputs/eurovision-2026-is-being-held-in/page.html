@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurovision Song Contest 2026 in Vienna</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --color-bg:          #fafaf7;
+  --color-text:        #1a1a1a;
+  --color-text-muted:  #6b6b6b;
+  --color-border:      #e5e5e0;
+  --color-accent:      #8b0000;
+  --color-link:        #8b0000;
+  --color-primary:     #1a5d1a;
+  --color-corroborated:#1d4e89;
+  --color-single:      #8a6d00;
+
+  --font-serif: 'Source Serif Pro', Georgia, serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  --max-width:          720px;
+  --line-height-body:   1.65;
+  --line-height-heading:1.2;
+
+  --size-h1:     2.5rem;
+  --size-h2:     1.75rem;
+  --size-h3:     1.25rem;
+  --size-body:   1.0625rem;
+  --size-small:  0.875rem;
+  --size-caption:0.75rem;
+
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+a { color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+/* ── Top bar ──────────────────────────────────────────────────────────── */
+.topbar {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--size-caption);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+.topbar-brand {
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--size-caption);
+}
+
+/* ── Layout wrapper ───────────────────────────────────────────────────── */
+.page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-2xl);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+.hero-eyebrow .event-type {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.hero h1 {
+  font-size: var(--size-h1);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.01em;
+}
+.hero-rule {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+.hero-summary {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+.hero-meta {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+.hero-meta span + span::before { content: " · "; }
+
+/* ── Section headers ──────────────────────────────────────────────────── */
+.section {
+  margin-top: var(--space-xl);
+}
+.section-header {
+  margin-bottom: var(--space-md);
+}
+.section-header h2 {
+  font-size: var(--size-h2);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+/* ── At-a-glance 5W ──────────────────────────────────────────────────── */
+.five-w-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-lg);
+  margin-top: var(--space-md);
+}
+.five-w-item {}
+.five-w-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+.five-w-text {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+/* ── Timeline ─────────────────────────────────────────────────────────── */
+.timeline {
+  margin-top: var(--space-md);
+  position: relative;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 6rem 1.25rem 1fr;
+  gap: 0 var(--space-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+.timeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.timeline-line {
+  width: 1px;
+  background: var(--color-border);
+  flex: 1;
+  margin-top: 2px;
+}
+.timeline-item:last-child .timeline-line { display: none; }
+.timeline-content {}
+.timeline-title {
+  font-weight: 600;
+  font-size: var(--size-body);
+  margin-bottom: var(--space-xs);
+}
+.timeline-desc {
+  font-size: var(--size-small);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+}
+
+/* ── Credibility dot + label ──────────────────────────────────────────── */
+.cred {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  margin-left: var(--space-sm);
+  font-weight: 400;
+}
+.cred-primary     { color: var(--color-primary); }
+.cred-corroborated{ color: var(--color-corroborated); }
+.cred-single      { color: var(--color-single); }
+.cred-low         { color: var(--color-text-muted); }
+
+/* ── Source superscripts ──────────────────────────────────────────────── */
+sup.src-ref {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: -0.02em;
+  margin-left: 1px;
+}
+sup.src-ref a {
+  color: inherit;
+  text-decoration: none;
+}
+sup.src-ref a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ── Version comparison table ────────────────────────────────────────── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.comparison-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.comparison-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table .col-attr {
+  font-weight: 600;
+  width: 38%;
+  color: var(--color-text);
+}
+.comparison-table .col-prev {
+  width: 28%;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+}
+.comparison-table .col-new {
+  width: 28%;
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text);
+}
+.comparison-table .col-src {
+  width: 6%;
+  text-align: right;
+}
+
+/* ── Reception ────────────────────────────────────────────────────────── */
+.reception-group {
+  margin-top: var(--space-md);
+}
+.reception-group-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+.reception-item {
+  border-left: 4px solid var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.reception-item.positive { border-left-color: var(--color-primary); }
+.reception-item.critical { border-left-color: var(--color-accent); }
+.reception-group-label.positive { color: var(--color-primary); }
+.reception-group-label.critical { color: var(--color-accent); }
+.reception-quote {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+}
+.reception-attribution {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+.reception-attribution::before { content: "— "; }
+
+/* ── Schedule table ──────────────────────────────────────────────────── */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.schedule-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.schedule-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.schedule-table tr:last-child td { border-bottom: none; }
+.schedule-table .col-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  width: 18%;
+  white-space: nowrap;
+}
+.schedule-table .col-title { font-weight: 600; width: 55%; }
+.schedule-table .col-venue { color: var(--color-text-muted); width: 21%; }
+.schedule-table .col-src   { width: 6%; text-align: right; }
+
+/* ── Participants chips ──────────────────────────────────────────────── */
+.participants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.participant-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--size-small);
+}
+.participant-chip-name {
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+.participant-chip-role {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ── Live status ─────────────────────────────────────────────────────── */
+.live-status-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+}
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.live-status-text { font-weight: 500; }
+.live-update { color: var(--color-text-muted); }
+
+/* ── Background prose ────────────────────────────────────────────────── */
+.background-prose p {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  margin-top: var(--space-md);
+}
+.background-prose p:first-child { margin-top: var(--space-md); }
+
+/* ── Key entities chips ──────────────────────────────────────────────── */
+.entities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.entity-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  max-width: 340px;
+}
+.entity-chip-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: 2px;
+}
+.entity-chip-name { font-weight: 600; font-size: var(--size-small); }
+.entity-chip-type {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.entity-chip-desc {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Sources list ────────────────────────────────────────────────────── */
+.sources-list {
+  list-style: none;
+  margin-top: var(--space-md);
+}
+.sources-list li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--size-small);
+}
+.sources-list li:last-child { border-bottom: none; }
+.src-num {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+}
+.src-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.src-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+.src-tier { display: inline; }
+.src-url {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  word-break: break-all;
+  color: var(--color-text-muted);
+}
+.src-url a { color: var(--color-link); }
+
+/* ── Tier labels — primary source gets semantic green; media tiers muted ── */
+.tier-primary      { color: var(--color-primary); }
+.tier-tier1        { color: var(--color-text-muted); }
+.tier-tier2        { color: var(--color-text-muted); }
+.tier-tier3        { color: var(--color-text-muted); }
+.tier-low          { color: var(--color-text-muted); }
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .page-wrap { padding: 0 var(--space-md) var(--space-xl); }
+
+  .hero h1 { font-size: 1.75rem; }
+  .hero-summary { font-size: 1rem; }
+
+  .five-w-grid { grid-template-columns: 1fr; }
+
+  .timeline-item { grid-template-columns: 5rem 1.25rem 1fr; }
+  .timeline-date { font-size: var(--size-caption); }
+
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-xs) var(--space-sm); }
+  .comparison-table .col-prev { display: none; }
+  .comparison-table .col-attr { width: 55%; }
+  .comparison-table .col-new  { width: 38%; }
+
+  .section-header h2 { font-size: 1.375rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="topbar">
+  <span class="topbar-brand">Topic Page Generator</span>
+  <span>Generated May 15, 2026 04:30 UTC &nbsp;·&nbsp; v0.1.0</span>
+</header>
+
+<div class="page-wrap">
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <p class="hero-eyebrow">
+    <span class="event-type">LIVE EVENT</span>
+    &nbsp;·&nbsp; MAY 12–16, 2026
+  </p>
+  <h1>Eurovision Song Contest 2026 Comes to Vienna for the 70th Edition</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-summary">The 70th Eurovision Song Contest will be held at the Wiener Stadthalle in Vienna, Austria, with live shows on May 12, 14, and 16, 2026. Austria&#39;s broadcaster ORF is hosting the event after JJ won the 2025 contest for Austria, with COSMÓ selected to represent Austria performing the song &#39;Tanzschein&#39; as the final act in the grand final. The contest, operating under the motto &#39;United by Music – in the heart of Europe,&#39; features nine shows in total and is expected to draw hundreds of thousands of visitors to Vienna.</p>
+  <p class="hero-meta">
+    <span>May 15, 2026 04:30 UTC</span>
+    <span>Compiled from 18 sources</span>
+  </p>
+</section>
+
+<!-- ── At-a-glance ──────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>At a Glance</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="five-w-grid">
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHO</div>
+      <div class="five-w-text">ORF, Austria&#39;s public broadcaster, is hosting the 70th Eurovision Song Contest in partnership with the European Broadcasting Union (EBU), with COSMÓ representing Austria.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHAT</div>
+      <div class="five-w-text">The 70th Eurovision Song Contest, the world&#39;s largest live music event, will feature nine shows across two semi-finals and a grand final at the Wiener Stadthalle.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHEN</div>
+      <div class="five-w-text">Live shows take place on May 12, 14, and 16, 2026, with the Eurovision Village open from May 10 to May 17.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHERE</div>
+      <div class="five-w-text">The main shows are held at the Wiener Stadthalle in Vienna, with the Eurovision Village fan zone at Rathausplatz and the EuroClub at PraterDOME.<sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHY</div>
+      <div class="five-w-text">Austria is hosting after JJ won the Eurovision Song Contest 2025, with Vienna selected unanimously for its infrastructure, logistics, and capacity — including over 80,000 hotel beds.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ── Timeline ─────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Timeline</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 18, 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          JJ Wins ESC 2025, Bringing Contest to Austria<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup>
+        </div>
+        <div class="timeline-desc">JJ won the Eurovision Song Contest 2025 for Austria, triggering Austria&#39;s right to host the 70th edition of the contest.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">August 20, 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Vienna Announced as Host City<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-4">[4]</a></sup>
+        </div>
+        <div class="timeline-desc">ORF Director General Roland Weißmann announced on the Ö3-Wecker that Vienna had been selected as the host city, with the jury decision unanimous based on infrastructure, logistics, and economic factors.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">October 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Postcard Production Begins<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup>
+        </div>
+        <div class="timeline-desc">Gebhardt Productions began production of the Postcards for ESC 2026, merging real outdoor shots at Austrian locations with studio recordings of the artists.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">November 24, 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Ticket Sales Information Released<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup>
+        </div>
+        <div class="timeline-desc">Detailed information about the multi-stage ticketing system was made available on the Eurovision Song Contest and ORF websites and social media accounts.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">December 1, 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Volunteer Applications Open<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup>
+        </div>
+        <div class="timeline-desc">The registration process for volunteers opened, with interested parties able to apply via video and CV; ORF sought around 800 volunteer helpers, and more than 1,800 people had already pre-registered.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">December 18, 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Ticket Registration Closes; Stand-In Auditions Begin<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup>
+        </div>
+        <div class="timeline-desc">Ticket registration closed at 11:59 PM with more than 250,000 registrations received. Simultaneously, three auditions for stand-in performers began at Motions Studios in Vienna, running through December 20.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">January 12, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Semi-Final Allocation Draw<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-3">[3]</a></sup>
+        </div>
+        <div class="timeline-desc">The Semi-Final Allocation Draw took place, determining which countries would compete in which semi-final.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">January 13, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Tickets Sell Out in Record Time<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup>
+        </div>
+        <div class="timeline-desc">The first sales wave for tickets launched and all nine shows sold out in record time, with ticket prices ranging from around 15 euros for afternoon shows to 360 euros for the Golden Circle at the final.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">January 14, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          First Major Production Meeting Held in Vienna<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-8">[8]</a></sup>
+        </div>
+        <div class="timeline-desc">The first major production meeting for ESC 2026 took place over two days at the ORF Media Campus and Wiener Stadthalle, with 27 international production suppliers attending and key creative leads presenting their concepts.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">February 20, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Austria Selects COSMÓ at National Final<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup>
+        </div>
+        <div class="timeline-desc">The national final &#39;Vienna Calling – Who&#39;s Singing for Austria?&#39; was broadcast live on ORF 1, selecting COSMÓ to represent Austria; the show drew 1.3 million viewers.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">March 17, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Head of Delegation Meeting in Vienna<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-7">[7]</a></sup>
+        </div>
+        <div class="timeline-desc">Delegation heads from all participating countries traveled to Vienna for a meeting where ORF and EBU representatives provided updates on current plans including the Stadthalle and opening ceremony.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">March 19, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          ESC Mascot Auri Unveiled<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-7">[7]</a></sup>
+        </div>
+        <div class="timeline-desc">The official Eurovision Song Contest 2026 mascot, named Auri, was presented to the public at the ORF ESC media update.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">April 17, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Austrian School Music Competition Concludes<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup>
+        </div>
+        <div class="timeline-desc">The Austrian School Music Competition for ESC 2026 received more than 100 entries and produced nine winning classes.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">April 27, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Volunteers Begin Duties<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup>
+        </div>
+        <div class="timeline-desc">Volunteers began assisting at various locations including the Media Centre, Information desks at the Wiener Stadthalle, the Eurovision Village at Rathausplatz, and the airport.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">April 28, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Federal President Opens the Stage<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup>
+        </div>
+        <div class="timeline-desc">Federal President Van der Bellen officially opened the stage for the Eurovision Song Contest 2026.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 2, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Eurovision Village Construction in Full Swing<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">Construction of the Eurovision Village at Rathausplatz intensified, with up to 300 people simultaneously engaged in setup of the 70,000 square meter event area.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 6, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          ESC Honored with AUVA Quality Seal<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup>
+        </div>
+        <div class="timeline-desc">The Eurovision Song Contest was honored as the first event in Austria to receive the AUVA quality seal.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 10, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Eurovision Village Opens and Turquoise Carpet Event Held<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">The Eurovision Village opened with free admission at Rathausplatz, and all 35 delegations appeared together for the first time at the Turquoise Carpet Event. The contest also received three certifications for sustainability.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 12, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          First Semi-Final at Wiener Stadthalle<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">The first live semi-final show was broadcast from the Wiener Stadthalle, with public viewing available at the Eurovision Village on more than ten LED walls.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 13, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Second Semi-Final Rehearsal and Full ESC Programming Day<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-5">[5]</a></sup>
+        </div>
+        <div class="timeline-desc">All ORF channels dedicated their programming to ESC 2026, with a rehearsal run of the second semi-final starting at 3:30 PM, and events at Eurovision Village, Eurofan House, and EuroClub running throughout the day.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 14, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Second Semi-Final at Wiener Stadthalle<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">The second live semi-final show was broadcast from the Wiener Stadthalle, with the Eurovision Village opening at 11:00 AM for the first ESC Frühschoppen organized by the Vienna Wind Music Association.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 16, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Grand Final at Wiener Stadthalle<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup>
+        </div>
+        <div class="timeline-desc">The grand final was held at the Wiener Stadthalle, with COSMÓ performing &#39;Tanzschein&#39; as the final act (starting number 25). Up to 20,000 people were expected at City Hall Square for the public viewing.</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- ── Version Comparison ────────────────────────────────────────────── -->
+
+
+<!-- ── Reception ─────────────────────────────────────────────────────── -->
+
+
+<!-- ── Schedule ──────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Schedule</h2>
+    <hr class="section-divider">
+  </div>
+  
+  
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th class="col-date">Date</th>
+        <th class="col-title">Event</th>
+        
+        <th class="col-src">Src</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="col-date">October 2025</td>
+        <td class="col-title">Postcard Production Begins</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">November 24, 2025</td>
+        <td class="col-title">Ticket Sales Information Published</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">December 1, 2025</td>
+        <td class="col-title">Volunteer Applications Open</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">December 18–20, 2025</td>
+        <td class="col-title">Stand-In Performer Auditions at Motions Studios, Vienna</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">December 18, 2025</td>
+        <td class="col-title">Ticket Registration Closes (11:59 PM)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-3">[3]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">January 12, 2026</td>
+        <td class="col-title">Semi-Final Allocation Draw</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-3">[3]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">January 13, 2026</td>
+        <td class="col-title">First Ticket Sales Wave Launches</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-3">[3]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">January 28, 2026</td>
+        <td class="col-title">Volunteer Application Online Form Closes (11:59 PM)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-3">[3]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">February 20, 2026</td>
+        <td class="col-title">National Final &#39;Vienna Calling – Who&#39;s Singing for Austria?&#39; Broadcast Live</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">March 17, 2026</td>
+        <td class="col-title">Head of Delegation Meeting in Vienna</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">March 19, 2026</td>
+        <td class="col-title">ESC Mascot Auri Presented to the Public</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">April 27, 2026</td>
+        <td class="col-title">Volunteer Duties Begin</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 10, 2026</td>
+        <td class="col-title">Eurovision Village Opens – Grand Opening (Theme: &#39;Merci, Chérie&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 11, 2026</td>
+        <td class="col-title">Eurovision Village Day 2 – Greatest Hits (Theme: &#39;My Number One&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 12, 2026</td>
+        <td class="col-title">First Semi-Final – Live Show at Wiener Stadthalle (Theme: &#39;Euphoria&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 13, 2026</td>
+        <td class="col-title">Second Semi-Final Rehearsal Day (Theme: &#39;Insieme&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 14, 2026</td>
+        <td class="col-title">Second Semi-Final – Live Show at Wiener Stadthalle (Theme: &#39;Fairytale&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 15, 2026</td>
+        <td class="col-title">Eurovision Village Day 6 – Freaky Friday (Theme: &#39;Wild Dances&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 16, 2026</td>
+        <td class="col-title">Grand Final – Live Show at Wiener Stadthalle (Theme: &#39;Heroes&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">May 17, 2026</td>
+        <td class="col-title">Eurovision Village Aftershow (Theme: &#39;Après Toi&#39;)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ── Participants ───────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Participants</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="participants-grid">
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">COSMÓ<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+      <div class="participant-chip-role">Austrian Representative</div>
+      
+      <div class="entity-chip-desc">Performs &#39;Tanzschein&#39; as the final act (starting number 25) in the grand final, selected via the national final on February 20, 2026.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Roland Weißmann<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></div>
+      <div class="participant-chip-role">ORF Director General</div>
+      
+      <div class="entity-chip-desc">Announced Vienna as the host city on August 20, 2025, and welcomed production suppliers at the January 2026 production meeting.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Michael Krön<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+      <div class="participant-chip-role">ORF ESC Executive Producer</div>
+      
+      <div class="entity-chip-desc">Leads the overall production of the Eurovision Song Contest 2026 for ORF.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Martin Green<sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+      <div class="participant-chip-role">ESC Director, EBU</div>
+      
+      <div class="entity-chip-desc">Represents the European Broadcasting Union in the organization of the Eurovision Song Contest 2026.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Michael Ludwig<sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+      <div class="participant-chip-role">Mayor of Vienna</div>
+      
+      <div class="entity-chip-desc">Visited the Eurovision Village construction site and stated that Vienna is ready for the 70th Eurovision Song Contest.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Florian Wieder<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></div>
+      <div class="participant-chip-role">Stage Designer</div>
+      
+      <div class="entity-chip-desc">Responsible for the ESC 2026 stage design concept inspired by the Viennese Secession, featuring a curved LED leaf centrepiece. Has designed the Song Contest stage eight times since 2011.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Tim Routledge<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+      <div class="participant-chip-role">Lighting Designer</div>
+      
+      <div class="entity-chip-desc">Responsible for the overall visual and lighting concept, using a fully LED and laser-based system with more than 2,100 units. BAFTA Award winner in 2024 for ESC lighting.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Michael Kögler<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></div>
+      <div class="participant-chip-role">Director</div>
+      
+      <div class="entity-chip-desc">Co-director of ESC 2026 alongside Robin Hofwander. A two-time Emmy Award winner who was also co-director of ESC 2015 in Vienna.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Robin Hofwander<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-8">[8]</a></sup></div>
+      <div class="participant-chip-role">Director</div>
+      
+      <div class="entity-chip-desc">Co-director of ESC 2026 alongside Michael Kögler, having previously directed in Basel in 2025.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Alice Tumler<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+      <div class="participant-chip-role">National Final Host</div>
+      
+      <div class="entity-chip-desc">Co-hosts the national final &#39;Vienna Calling – Who&#39;s Singing for Austria?&#39; alongside Cesár Sampson.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Cesár Sampson<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+      <div class="participant-chip-role">National Final Host and Scout</div>
+      
+      <div class="entity-chip-desc">Co-hosts the national final &#39;Vienna Calling&#39; alongside Alice Tumler, and also serves as a scout in the act selection process.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Michael Ostrowski<sup class="src-ref"><a href="#src-5">[5]</a></sup></div>
+      <div class="participant-chip-role">ESC 2026 Show Host</div>
+      
+      <div class="entity-chip-desc">Hosts the Eurovision Song Contest 2026 main shows.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Ingrid Thurnher<sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+      <div class="participant-chip-role">ORF Director General</div>
+      
+      <div class="entity-chip-desc">Visited the Eurovision Village construction site alongside Mayor Michael Ludwig and stated that City Hall Square is the number one fan zone for this Eurovision Song Contest.</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ── Live Status ───────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Live Status</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="live-status-bar">
+    <div class="live-dot"></div>
+    <span class="live-status-text">Ongoing</span>
+    
+    <span class="live-update">Updated May 16, 2026</span>
+    
+    <sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+  </div>
+</section>
+
+
+<!-- ── Background ────────────────────────────────────────────────────── -->
+
+
+<!-- ── Key Entities ──────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Key Entities</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="entities-grid">
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Eurovision Song Contest 2026</span>
+        <span class="entity-chip-type">event</span>
+      </div>
+      <div class="entity-chip-desc">The 70th Eurovision Song Contest, held at the Wiener Stadthalle in Vienna on May 12, 14, and 16, 2026, under the motto &#39;United by Music – in the heart of Europe.&#39; It features nine shows in total and is the world&#39;s largest live music event.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">ORF</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">Austria&#39;s public service broadcaster and host broadcaster of ESC 2026, responsible for production, volunteer coordination, ticketing, and sustainability certification efforts including dual &#39;Green Event&#39; and &#39;Green Producing&#39; certification.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">European Broadcasting Union (EBU)</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">The international organization that co-organizes the Eurovision Song Contest alongside the host broadcaster ORF, with ESC Director Martin Green representing the EBU.<sup class="src-ref"><a href="#src-4">[4]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Wiener Stadthalle</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">The main venue for ESC 2026, the largest indoor venue in Austria with a capacity of up to 16,000 visitors in Hall D. It is EMAS-certified and its electricity comes largely from its own photovoltaic system.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Vienna</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">The host city for ESC 2026, selected unanimously for its infrastructure, logistics, and economic factors. Vienna has over 80,000 hotel beds and is described as one of the most musical cities in the world.<sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">COSMÓ</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">Austria&#39;s representative at the Eurovision Song Contest 2026, selected via the national final &#39;Vienna Calling – Who&#39;s Singing for Austria?&#39; on February 20, 2026. COSMÓ performs the song &#39;Tanzschein&#39; as the final act (starting number 25) in the grand final.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Florian Wieder</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">The stage designer for ESC 2026, whose concept is inspired by the Viennese Secession and features a curved LED leaf as its centrepiece. Wieder has been responsible for Song Contest stage design eight times since 2011 and also designed the Vienna 2015 stage.<sup class="src-ref"><a href="#src-3">[3]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Tim Routledge</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">The internationally renowned lighting designer for ESC 2026, responsible for a fully LED and laser-based system with more than 2,100 units and 80 high-speed winches. A BAFTA Award winner in 2024 for his ESC work, he has also designed lighting for ESC 2023 and 2025.<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ── Sources ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Sources</h2>
+    <hr class="section-divider">
+  </div>
+  <ol class="sources-list">
+    
+    <li id="src-1">
+      <div class="src-num">1</div>
+      <div>
+        <div class="src-title">ORF presents updates on the 70th Eurovision Song Contest in Vienna - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2025-11-24
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/esc_media_update100.html" target="_blank" rel="noopener">https://tv.orf.at/stories/esc_media_update100.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-2">
+      <div class="src-num">2</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest 2026 in Austria - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2026-05-13
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/esc-medienupdate/index.html" target="_blank" rel="noopener">https://tv.orf.at/esc-medienupdate/index.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-3">
+      <div class="src-num">3</div>
+      <div>
+        <div class="src-title">This is what the new Stage Design for the ESC Stage 2026 looks like! - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2011-01-01
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/esc_media_update106.html" target="_blank" rel="noopener">https://tv.orf.at/stories/esc_media_update106.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-4">
+      <div class="src-num">4</div>
+      <div>
+        <div class="src-title">Vienna is the Host City for the Eurovision Song Contest 2026 - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2025-08-20
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/esc_host_city100.html" target="_blank" rel="noopener">https://tv.orf.at/stories/esc_host_city100.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-5">
+      <div class="src-num">5</div>
+      <div>
+        <div class="src-title">The Highlights around the Eurovision Song Contest 2026 on May 13 - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2026-05-13
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/260513_esc106.html" target="_blank" rel="noopener">https://tv.orf.at/stories/260513_esc106.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-6">
+      <div class="src-num">6</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest 2026: Mayor Ludwig and ORF Director General Thurnher at the Construction of the Eurovision Village at Rathausplatz - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/260508_esc100.html" target="_blank" rel="noopener">https://tv.orf.at/stories/260508_esc100.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-7">
+      <div class="src-num">7</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest: Austria with starting number 25 in the final - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2026-03-17
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/260317_esc100.html" target="_blank" rel="noopener">https://tv.orf.at/stories/260317_esc100.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-8">
+      <div class="src-num">8</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest 2026: First major production meeting in Vienna - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2026-01-16
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/esc_production_meeting102.html" target="_blank" rel="noopener">https://tv.orf.at/stories/esc_production_meeting102.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-9">
+      <div class="src-num">9</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest 2026 – ORF sets new standards in creativity and sustainability with lighting design - tv.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2026-03-11
+        </div>
+        <div class="src-url"><a href="https://tv.orf.at/stories/260311_esc100.html" target="_blank" rel="noopener">https://tv.orf.at/stories/260311_esc100.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-10">
+      <div class="src-num">10</div>
+      <div>
+        <div class="src-title">ORF – The Austrian Broadcasting Corporation - der.ORF.at</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; orf.at
+          &nbsp;·&nbsp; 2026-03-16
+        </div>
+        <div class="src-url"><a href="https://der.orf.at/unternehmen/austrian-broadcasting-corporation/index.html" target="_blank" rel="noopener">https://der.orf.at/unternehmen/austrian-broadcasting-corporation/index.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-11">
+      <div class="src-num">11</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest 2026: What countries will be taking part?</div>
+        <div class="src-meta">
+          <span class="tier-tier1 src-tier">● Tier-1 media</span>
+          &nbsp;·&nbsp; bbc.co.uk
+          &nbsp;·&nbsp; 2026-05-11
+        </div>
+        <div class="src-url"><a href="https://www.bbc.co.uk/newsround/articles/cn9pj95ynvlo" target="_blank" rel="noopener">https://www.bbc.co.uk/newsround/articles/cn9pj95ynvlo</a></div>
+      </div>
+    </li>
+    
+    <li id="src-12">
+      <div class="src-num">12</div>
+      <div>
+        <div class="src-title">Eurovision Song Contest 2026</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; stadthalle.com
+          &nbsp;·&nbsp; 2026-05-13
+        </div>
+        <div class="src-url"><a href="https://stadthalle.com/en-us/esc2026" target="_blank" rel="noopener">https://stadthalle.com/en-us/esc2026</a></div>
+      </div>
+    </li>
+    
+    <li id="src-13">
+      <div class="src-num">13</div>
+      <div>
+        <div class="src-title">Eurovision 2026 Results</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; eurovisionworld.com
+          
+        </div>
+        <div class="src-url"><a href="https://eurovisionworld.com/eurovision/2026" target="_blank" rel="noopener">https://eurovisionworld.com/eurovision/2026</a></div>
+      </div>
+    </li>
+    
+    <li id="src-14">
+      <div class="src-num">14</div>
+      <div>
+        <div class="src-title">Eurovision 2026: The First Semi-Final Qualifiers</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; eurovision.com
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://www.eurovision.com/stories/eurovision-2026-first-semi-final-qualifiers-vienna/" target="_blank" rel="noopener">https://www.eurovision.com/stories/eurovision-2026-first-semi-final-qualifiers-vienna/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-15">
+      <div class="src-num">15</div>
+      <div>
+        <div class="src-title">Eurovision Week: All you need to know about Vienna 2026</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; eurovision.com
+          &nbsp;·&nbsp; 2026-05-11
+        </div>
+        <div class="src-url"><a href="https://www.eurovision.com/stories/eurovision-week-all-you-need-to-know-about-vienna-2026/" target="_blank" rel="noopener">https://www.eurovision.com/stories/eurovision-week-all-you-need-to-know-about-vienna-2026/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-16">
+      <div class="src-num">16</div>
+      <div>
+        <div class="src-title">Eurovision 2026 latest: Australia, ‘Love Island’ star and UK’s Look Mum No Computer perform in semi-final</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; the-independent.com
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://www.the-independent.com/arts-entertainment/eurovision/eurovision-2026-live-updates-semi-final-israel-finland-b2974741.html" target="_blank" rel="noopener">https://www.the-independent.com/arts-entertainment/eurovision/eurovision-2026-live-updates-semi-final-israel-finland-b2974741.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-17">
+      <div class="src-num">17</div>
+      <div>
+        <div class="src-title">Eurovision 2026 Semi-final 1 Results</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; eurovisionworld.com
+          &nbsp;·&nbsp; 2026-05-12
+        </div>
+        <div class="src-url"><a href="https://eurovisionworld.com/eurovision/2026/semi-final-1" target="_blank" rel="noopener">https://eurovisionworld.com/eurovision/2026/semi-final-1</a></div>
+      </div>
+    </li>
+    
+    <li id="src-18">
+      <div class="src-num">18</div>
+      <div>
+        <div class="src-title">Eurovision 2026 Semi Final 1 line-up, running order, list of songs and countries</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; manchestereveningnews.co.uk
+          &nbsp;·&nbsp; 2026-05-12
+        </div>
+        <div class="src-url"><a href="https://www.manchestereveningnews.co.uk/news/tv/eurovision-2026-semi-final-1-33915082" target="_blank" rel="noopener">https://www.manchestereveningnews.co.uk/news/tv/eurovision-2026-semi-final-1-33915082</a></div>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+</div><!-- /page-wrap -->
+</body>
+</html>

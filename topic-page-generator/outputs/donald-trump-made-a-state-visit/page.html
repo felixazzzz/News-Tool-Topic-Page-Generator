@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donald Trump State Visit to China, May 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --color-bg:          #fafaf7;
+  --color-text:        #1a1a1a;
+  --color-text-muted:  #6b6b6b;
+  --color-border:      #e5e5e0;
+  --color-accent:      #8b0000;
+  --color-link:        #8b0000;
+  --color-primary:     #1a5d1a;
+  --color-corroborated:#1d4e89;
+  --color-single:      #8a6d00;
+
+  --font-serif: 'Source Serif Pro', Georgia, serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  --max-width:          720px;
+  --line-height-body:   1.65;
+  --line-height-heading:1.2;
+
+  --size-h1:     2.5rem;
+  --size-h2:     1.75rem;
+  --size-h3:     1.25rem;
+  --size-body:   1.0625rem;
+  --size-small:  0.875rem;
+  --size-caption:0.75rem;
+
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+a { color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+/* ── Top bar ──────────────────────────────────────────────────────────── */
+.topbar {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--size-caption);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+.topbar-brand {
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--size-caption);
+}
+
+/* ── Layout wrapper ───────────────────────────────────────────────────── */
+.page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-2xl);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+.hero-eyebrow .event-type {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.hero h1 {
+  font-size: var(--size-h1);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.01em;
+}
+.hero-rule {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+.hero-summary {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+.hero-meta {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+.hero-meta span + span::before { content: " · "; }
+
+/* ── Section headers ──────────────────────────────────────────────────── */
+.section {
+  margin-top: var(--space-xl);
+}
+.section-header {
+  margin-bottom: var(--space-md);
+}
+.section-header h2 {
+  font-size: var(--size-h2);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+/* ── At-a-glance 5W ──────────────────────────────────────────────────── */
+.five-w-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-lg);
+  margin-top: var(--space-md);
+}
+.five-w-item {}
+.five-w-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+.five-w-text {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+/* ── Timeline ─────────────────────────────────────────────────────────── */
+.timeline {
+  margin-top: var(--space-md);
+  position: relative;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 6rem 1.25rem 1fr;
+  gap: 0 var(--space-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+.timeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.timeline-line {
+  width: 1px;
+  background: var(--color-border);
+  flex: 1;
+  margin-top: 2px;
+}
+.timeline-item:last-child .timeline-line { display: none; }
+.timeline-content {}
+.timeline-title {
+  font-weight: 600;
+  font-size: var(--size-body);
+  margin-bottom: var(--space-xs);
+}
+.timeline-desc {
+  font-size: var(--size-small);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+}
+
+/* ── Credibility dot + label ──────────────────────────────────────────── */
+.cred {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  margin-left: var(--space-sm);
+  font-weight: 400;
+}
+.cred-primary     { color: var(--color-primary); }
+.cred-corroborated{ color: var(--color-corroborated); }
+.cred-single      { color: var(--color-single); }
+.cred-low         { color: var(--color-text-muted); }
+
+/* ── Source superscripts ──────────────────────────────────────────────── */
+sup.src-ref {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: -0.02em;
+  margin-left: 1px;
+}
+sup.src-ref a {
+  color: inherit;
+  text-decoration: none;
+}
+sup.src-ref a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ── Version comparison table ────────────────────────────────────────── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.comparison-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.comparison-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table .col-attr {
+  font-weight: 600;
+  width: 38%;
+  color: var(--color-text);
+}
+.comparison-table .col-prev {
+  width: 28%;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+}
+.comparison-table .col-new {
+  width: 28%;
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text);
+}
+.comparison-table .col-src {
+  width: 6%;
+  text-align: right;
+}
+
+/* ── Reception ────────────────────────────────────────────────────────── */
+.reception-group {
+  margin-top: var(--space-md);
+}
+.reception-group-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+.reception-item {
+  border-left: 4px solid var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.reception-item.positive { border-left-color: var(--color-primary); }
+.reception-item.critical { border-left-color: var(--color-accent); }
+.reception-group-label.positive { color: var(--color-primary); }
+.reception-group-label.critical { color: var(--color-accent); }
+.reception-quote {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+}
+.reception-attribution {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+.reception-attribution::before { content: "— "; }
+
+/* ── Schedule table ──────────────────────────────────────────────────── */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.schedule-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.schedule-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.schedule-table tr:last-child td { border-bottom: none; }
+.schedule-table .col-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  width: 18%;
+  white-space: nowrap;
+}
+.schedule-table .col-title { font-weight: 600; width: 55%; }
+.schedule-table .col-venue { color: var(--color-text-muted); width: 21%; }
+.schedule-table .col-src   { width: 6%; text-align: right; }
+
+/* ── Participants chips ──────────────────────────────────────────────── */
+.participants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.participant-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--size-small);
+}
+.participant-chip-name {
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+.participant-chip-role {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ── Live status ─────────────────────────────────────────────────────── */
+.live-status-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+}
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.live-status-text { font-weight: 500; }
+.live-update { color: var(--color-text-muted); }
+
+/* ── Background prose ────────────────────────────────────────────────── */
+.background-prose p {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  margin-top: var(--space-md);
+}
+.background-prose p:first-child { margin-top: var(--space-md); }
+
+/* ── Key entities chips ──────────────────────────────────────────────── */
+.entities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.entity-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  max-width: 340px;
+}
+.entity-chip-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: 2px;
+}
+.entity-chip-name { font-weight: 600; font-size: var(--size-small); }
+.entity-chip-type {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.entity-chip-desc {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Sources list ────────────────────────────────────────────────────── */
+.sources-list {
+  list-style: none;
+  margin-top: var(--space-md);
+}
+.sources-list li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--size-small);
+}
+.sources-list li:last-child { border-bottom: none; }
+.src-num {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+}
+.src-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.src-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+.src-tier { display: inline; }
+.src-url {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  word-break: break-all;
+  color: var(--color-text-muted);
+}
+.src-url a { color: var(--color-link); }
+
+/* ── Tier labels — primary source gets semantic green; media tiers muted ── */
+.tier-primary      { color: var(--color-primary); }
+.tier-tier1        { color: var(--color-text-muted); }
+.tier-tier2        { color: var(--color-text-muted); }
+.tier-tier3        { color: var(--color-text-muted); }
+.tier-low          { color: var(--color-text-muted); }
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .page-wrap { padding: 0 var(--space-md) var(--space-xl); }
+
+  .hero h1 { font-size: 1.75rem; }
+  .hero-summary { font-size: 1rem; }
+
+  .five-w-grid { grid-template-columns: 1fr; }
+
+  .timeline-item { grid-template-columns: 5rem 1.25rem 1fr; }
+  .timeline-date { font-size: var(--size-caption); }
+
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-xs) var(--space-sm); }
+  .comparison-table .col-prev { display: none; }
+  .comparison-table .col-attr { width: 55%; }
+  .comparison-table .col-new  { width: 38%; }
+
+  .section-header h2 { font-size: 1.375rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="topbar">
+  <span class="topbar-brand">Topic Page Generator</span>
+  <span>Generated May 15, 2026 04:33 UTC &nbsp;·&nbsp; v0.1.0</span>
+</header>
+
+<div class="page-wrap">
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <p class="hero-eyebrow">
+    <span class="event-type">POLITICAL EVENT</span>
+    &nbsp;·&nbsp; MAY 12–15, 2026
+  </p>
+  <h1>Trump Makes First U.S. Presidential State Visit to China Since 2017, Holding High-Stakes Summit with Xi Jinping</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-summary">President Donald Trump traveled to Beijing on May 12–15, 2026, for a landmark state visit and summit with Chinese President Xi Jinping at the Great Hall of the People and Zhongnanhai — the first U.S. presidential visit to China since 2017. The two leaders held talks spanning trade, Taiwan, the ongoing Iran war, technology, and energy, culminating in a sweeping trade and economic agreement that included Chinese commitments on rare earth exports, agricultural purchases, and fentanyl precursor controls. The summit also produced a new bilateral framework of &#39;constructive, strategic stability&#39; and plans for a &#39;Board of Trade&#39; to oversee ongoing economic commitments.</p>
+  <p class="hero-meta">
+    <span>May 15, 2026 04:33 UTC</span>
+    <span>Compiled from 14 sources</span>
+  </p>
+</section>
+
+<!-- ── At-a-glance ──────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>At a Glance</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="five-w-grid">
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHO</div>
+      <div class="five-w-text">President Donald J. Trump and Chinese President Xi Jinping, joined by senior officials including Secretary of State Marco Rubio and CEOs from major U.S. companies including Mastercard, Visa, Nvidia, Apple, Exxon, and Boeing.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHAT</div>
+      <div class="five-w-text">A state visit and bilateral summit covering trade, Taiwan, the Iran war, technology, and energy, resulting in a broad trade and economic agreement and a new framework of &#39;constructive, strategic stability.&#39;<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup><sup class="src-ref"><a href="#src-14">[14]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHEN</div>
+      <div class="five-w-text">May 12–15, 2026, with Trump departing the White House on May 12 and wrapping up meetings in Beijing on May 15.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHERE</div>
+      <div class="five-w-text">Beijing, China — primarily at the Great Hall of the People and Zhongnanhai, Xi Jinping&#39;s official residence, with a visit to the Temple of Heaven.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHY</div>
+      <div class="five-w-text">Trump sought to advance U.S. economic interests through trade commitments, secure Chinese support for ending the Iran war and reopening the Strait of Hormuz, and demonstrate that his personal relationship with Xi could deliver tangible benefits for the United States.<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ── Timeline ─────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Timeline</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 12, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Trump Departs the White House<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">President Trump gaggled with press before departing the White House, with a departure scheduled for May 12, 2026.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 13, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Trump Lands in China for Landmark Summit<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup>
+        </div>
+        <div class="timeline-desc">President Trump landed in China on May 13, 2026, for a landmark summit with Chinese leadership.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 14, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Welcome Ceremony, Great Hall Talks, State Banquet, and Temple of Heaven Visit<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup>
+        </div>
+        <div class="timeline-desc">Trump arrived at the Great Hall of the People, where a welcome ceremony was held ahead of talks with Xi. He participated in a state banquet — with sources placing it on either May 13 or May 14 — and visited the Temple of Heaven with Xi. U.S. business executives, including the CEOs of Mastercard and Visa, joined Trump&#39;s meeting with Xi. Elon Musk&#39;s 6-year-old son also appeared at the Great Hall in Chinese-style clothing, drawing viral attention on Chinese social media.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 15, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Final Meetings at Zhongnanhai; Trump Departs for Washington<span class="cred cred-single">● single source</span><sup class="src-ref"><a href="#src-7">[7]</a></sup>
+        </div>
+        <div class="timeline-desc">Trump and Xi met at Zhongnanhai, Xi&#39;s official residence, for an official photo, a working tea, and a closed-door lunch before Trump departed for Washington on Friday afternoon. China&#39;s Ministry of Foreign Affairs issued a statement saying the Strait of Hormuz door for dialogue should not be shut again.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 2026 (post-visit)</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Sweeping Trade and Economic Agreement Announced<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup>
+        </div>
+        <div class="timeline-desc">A trade and economic deal was announced following the summit, including Chinese commitments to effectively eliminate export controls on rare earth elements and critical minerals, end retaliation against U.S. semiconductor manufacturers, open China&#39;s market to U.S. soybeans and other agricultural exports, stop shipment of certain fentanyl precursor chemicals, and suspend retaliatory non-tariff countermeasures taken since March 4, 2025. The United States agreed to maintain its suspension of heightened reciprocal tariffs until November 10, 2026, with a 10% reciprocal tariff remaining in effect.</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- ── Version Comparison ────────────────────────────────────────────── -->
+
+
+<!-- ── Reception ─────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Reception</h2>
+    <hr class="section-divider">
+  </div>
+  
+  <div class="reception-group">
+    <div class="reception-group-label positive">● Positive</div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"Trump&#39;s meetings with Xi have promoted mutual understanding, deepened trust, advanced cooperation and injected stability into the world."<sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+      <div class="reception-attribution">Chinese Foreign Ministry spokesperson</div>
+    </div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"Xi &#39;is all business&#39; and &#39;There&#39;s no games. There&#39;s no talking about how nice the weather is.&#39; He is a &#39;very smart person&#39; and they have a &#39;good relationship.&#39;"<sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+      <div class="reception-attribution">President Donald Trump, speaking to Fox News</div>
+    </div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"There&#39;s going to be some agricultural purchases made as a result of this trip."<sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+      <div class="reception-attribution">Secretary of State Marco Rubio, speaking to NBC</div>
+    </div>
+    
+    <div class="reception-item positive">
+      <div class="reception-quote">"The Strait of Hormuz door for dialogue shouldn&#39;t be shut again and shipping routes should be reopened as soon as possible."<sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+      <div class="reception-attribution">China&#39;s Ministry of Foreign Affairs, in a statement issued on May 15, 2026</div>
+    </div>
+    
+  </div>
+  
+  
+  <div class="reception-group">
+    <div class="reception-group-label critical">○ Critical</div>
+    
+    <div class="reception-item critical">
+      <div class="reception-quote">"I hope the Chinese tell him what he needs to be told, and that is that what you are doing in the Strait is causing you to be globally isolated. You&#39;re the bad guy in this."<sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+      <div class="reception-attribution">Secretary of State Marco Rubio, on China&#39;s role in the Iran conflict</div>
+    </div>
+    
+    <div class="reception-item critical">
+      <div class="reception-quote">"Japan, South Korea, and Taiwan are particularly worried that President Trump, seeking to secure Chinese support on Iran, may make concessions on issues they consider vital."<sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+      <div class="reception-attribution">Analysis from the Center for Strategic and International Studies</div>
+    </div>
+    
+    <div class="reception-item critical">
+      <div class="reception-quote">"Taiwan is nervous before U.S.-China summits that its interests will be traded away to make progress on the issue of the day."<sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+      <div class="reception-attribution">Analysis from the Center for Strategic and International Studies</div>
+    </div>
+    
+    <div class="reception-item critical">
+      <div class="reception-quote">"Many U.S. policymakers believe official Chinese policy is to co-opt or outright steal U.S. technology to advance their domestic industries."<sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+      <div class="reception-attribution">Reaction from U.S. policy circles, as reported</div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<!-- ── Schedule ──────────────────────────────────────────────────────── -->
+
+
+<!-- ── Participants ───────────────────────────────────────────────────── -->
+
+
+<!-- ── Live Status ───────────────────────────────────────────────────── -->
+
+
+<!-- ── Background ────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Background</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="background-prose">
+    
+    <p>Trump&#39;s May 2026 state visit to Beijing marked the first U.S. presidential visit to China since 2017, when Trump was first in office and Xi staged a &#39;state visit-plus&#39; that included a private dinner in the Forbidden City, a parade through Tiananmen Square, and a Great Hall ceremony unveiling $250 billion in business deals. The summit had originally been planned for an earlier date but was delayed following U.S. and Israeli military strikes on Iran. For much of 2025, U.S.-China relations were dominated by an escalating trade war in which tariffs reached as high as 145%, with China retaliating by curtailing exports of rare earth minerals and halting purchases of American agricultural exports. A fragile trade truce was reached in October 2025, when Trump and Xi met face-to-face in South Korea, extending the truce for another year and securing a Chinese commitment to purchase 12 million metric tons of U.S. soybeans.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup><sup class="src-ref"><a href="#src-14">[14]</a></sup></p>
+    
+    <p>Heading into the summit, the two countries faced a complex web of geopolitical tensions spanning trade, Taiwan, the ongoing Iran war, and artificial intelligence. China processes around 90% of the world&#39;s rare earth minerals — essential for modern technology from smartphones to jet engines — and had used export controls on these materials as leverage in trade disputes. The U.S. Navy&#39;s blockade of the Strait of Hormuz, a consequence of the U.S.-Israel war against Iran, had sent global oil and gas prices soaring, hurting Chinese manufacturers and disrupting supply chains worldwide. Beijing had joined Pakistan as an unofficial mediator in the Iran conflict, presenting a five-point peace plan in March 2026, and China&#39;s top priority entering the summit was greater stability and predictability in its relationship with the United States, particularly on tariffs.<sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup><sup class="src-ref"><a href="#src-14">[14]</a></sup></p>
+    
+    <p>Taiwan remained the most sensitive issue for China throughout the talks. Beijing has been ramping up military pressure by sending warplanes and naval vessels around Taiwan almost daily, and Xi privately warned Trump that differences over Taiwan could bring the U.S. and China into clashes or conflict. The Trump administration had authorized an $11 billion arms package for Taiwan in December 2025 but had not yet moved forward with delivery. Indo-Pacific allies including Japan, South Korea, and Taiwan were watching the summit closely, worried that Trump might make concessions on Taiwan or arms sales in exchange for Chinese support on Iran. A February 2026 Supreme Court decision had also curtailed the president&#39;s unilateral tariff power, reshaping the domestic political context for the negotiations.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup><sup class="src-ref"><a href="#src-14">[14]</a></sup></p>
+    
+  </div>
+</section>
+
+
+<!-- ── Key Entities ──────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Key Entities</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="entities-grid">
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Donald Trump</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">The 47th President of the United States, who traveled to Beijing in May 2026 for a state visit and summit with Xi Jinping — the first U.S. presidential visit to China since 2017, when Trump was first in office.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-14">[14]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Xi Jinping</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">President of the People&#39;s Republic of China and leader of the Communist Party, who hosted Trump at the Great Hall of the People and Zhongnanhai, and agreed to a new framework of &#39;constructive, strategic stability&#39; with the United States.<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Marco Rubio</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">U.S. Secretary of State who accompanied Trump on the visit, confirmed that agricultural purchases would result from the trip, raised the case of Jimmy Lai with Xi, and stated that Taiwan would be a topic of conversation.<sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">United States of America</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">Represented by President Trump and his delegation, the U.S. sought trade commitments, Chinese support on the Iran war, and a new bilateral economic oversight framework through the summit.<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">People&#39;s Republic of China</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">Host of the state visit, China committed to lifting export controls on rare earths, resuming agricultural purchases, and cooperating on fentanyl, while pressing its priorities on Taiwan and tariff predictability.<sup class="src-ref"><a href="#src-3">[3]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup><sup class="src-ref"><a href="#src-14">[14]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Great Hall of the People</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">The primary venue in Beijing where Trump arrived on May 14, 2026, for formal talks and meetings with Xi Jinping, including a welcome ceremony and the participation of U.S. business executives.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Zhongnanhai</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">The walled compound in Beijing that serves as Xi Jinping&#39;s official residence and the headquarters of the central government, where Trump and Xi held their final meetings on May 15, including an official photo, working tea, and closed-door lunch.<sup class="src-ref"><a href="#src-7">[7]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Temple of Heaven</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">A complex of imperial temples in Beijing where emperors historically prayed for a good harvest; Trump and Xi visited together on May 14, 2026, as part of the state visit program.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ── Sources ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Sources</h2>
+    <hr class="section-divider">
+  </div>
+  <ol class="sources-list">
+    
+    <li id="src-1">
+      <div class="src-num">1</div>
+      <div>
+        <div class="src-title">Videos</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; whitehouse.gov
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://www.whitehouse.gov/past-events/" target="_blank" rel="noopener">https://www.whitehouse.gov/past-events/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-2">
+      <div class="src-num">2</div>
+      <div>
+        <div class="src-title">President Trump Participates in a Bilateral Meeting with the President of China</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; whitehouse.gov
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://www.whitehouse.gov/videos/president-trump-participates-in-a-bilateral-meeting-with-the-president-of-china/" target="_blank" rel="noopener">https://www.whitehouse.gov/videos/president-trump-participates-in-a-bilateral-meeting-with-the-president-of-china/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-3">
+      <div class="src-num">3</div>
+      <div>
+        <div class="src-title">Fact Sheet: President Donald J. Trump Strikes Deal on Economic and Trade Relations with China</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; whitehouse.gov
+          &nbsp;·&nbsp; 2025-11-01
+        </div>
+        <div class="src-url"><a href="https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/" target="_blank" rel="noopener">https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-4">
+      <div class="src-num">4</div>
+      <div>
+        <div class="src-title">Fact Sheets Archives</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; whitehouse.gov
+          &nbsp;·&nbsp; 2026-05-01
+        </div>
+        <div class="src-url"><a href="https://www.whitehouse.gov/fact-sheets/" target="_blank" rel="noopener">https://www.whitehouse.gov/fact-sheets/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-5">
+      <div class="src-num">5</div>
+      <div>
+        <div class="src-title">Public Schedule – May 15, 2026 - United States Department of State</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; state.gov
+          &nbsp;·&nbsp; 2026-05-01
+        </div>
+        <div class="src-url"><a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/05/public-schedule-may-15-2026/" target="_blank" rel="noopener">https://www.state.gov/releases/office-of-the-spokesperson/2026/05/public-schedule-may-15-2026/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-6">
+      <div class="src-num">6</div>
+      <div>
+        <div class="src-title">Gallery</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; whitehouse.gov
+          &nbsp;·&nbsp; 2026-03-12
+        </div>
+        <div class="src-url"><a href="https://www.whitehouse.gov/gallery/" target="_blank" rel="noopener">https://www.whitehouse.gov/gallery/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-7">
+      <div class="src-num">7</div>
+      <div>
+        <div class="src-title">Live updates: Trump prepares to round out talks with Xi as China visit nears end</div>
+        <div class="src-meta">
+          <span class="tier-tier1 src-tier">● Tier-1 media</span>
+          &nbsp;·&nbsp; apnews.com
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://apnews.com/live/trump-administration-updates-05-15-2026" target="_blank" rel="noopener">https://apnews.com/live/trump-administration-updates-05-15-2026</a></div>
+      </div>
+    </li>
+    
+    <li id="src-8">
+      <div class="src-num">8</div>
+      <div>
+        <div class="src-title">Trump says Chinese leader Xi offered to help broker peace with Iran</div>
+        <div class="src-meta">
+          <span class="tier-tier1 src-tier">● Tier-1 media</span>
+          &nbsp;·&nbsp; apnews.com
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://apnews.com/live/trump-administration-updates-05-14-2026" target="_blank" rel="noopener">https://apnews.com/live/trump-administration-updates-05-14-2026</a></div>
+      </div>
+    </li>
+    
+    <li id="src-9">
+      <div class="src-num">9</div>
+      <div>
+        <div class="src-title">Trump&#39;s visit to China could set relations for many years to come</div>
+        <div class="src-meta">
+          <span class="tier-tier1 src-tier">● Tier-1 media</span>
+          &nbsp;·&nbsp; bbc.com
+          &nbsp;·&nbsp; 2026-05-11
+        </div>
+        <div class="src-url"><a href="https://www.bbc.com/news/articles/ceqprgen1nyo" target="_blank" rel="noopener">https://www.bbc.com/news/articles/ceqprgen1nyo</a></div>
+      </div>
+    </li>
+    
+    <li id="src-10">
+      <div class="src-num">10</div>
+      <div>
+        <div class="src-title">What to know about Trump-Xi summit with trade, Taiwan and Iran on the agenda</div>
+        <div class="src-meta">
+          <span class="tier-tier1 src-tier">● Tier-1 media</span>
+          &nbsp;·&nbsp; apnews.com
+          &nbsp;·&nbsp; 2026-05-12
+        </div>
+        <div class="src-url"><a href="https://apnews.com/article/china-us-trump-xi-summit-1a0b28a9a7b9078d736ba94bf3b4d6e2" target="_blank" rel="noopener">https://apnews.com/article/china-us-trump-xi-summit-1a0b28a9a7b9078d736ba94bf3b4d6e2</a></div>
+      </div>
+    </li>
+    
+    <li id="src-11">
+      <div class="src-num">11</div>
+      <div>
+        <div class="src-title">Pres. Trump &amp; Xi Jinping toast each other at Beijing state banquet | CNN Politics</div>
+        <div class="src-meta">
+          <span class="tier-tier2 src-tier">● Tier-2 media</span>
+          &nbsp;·&nbsp; cnn.com
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://www.cnn.com/2026/05/14/politics/video/xi-trump-state-banquet-toasts" target="_blank" rel="noopener">https://www.cnn.com/2026/05/14/politics/video/xi-trump-state-banquet-toasts</a></div>
+      </div>
+    </li>
+    
+    <li id="src-12">
+      <div class="src-num">12</div>
+      <div>
+        <div class="src-title">Wednesday, May 13, 2026 - AlbertMohler.com</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; albertmohler.com
+          &nbsp;·&nbsp; 2026-05-13
+        </div>
+        <div class="src-url"><a href="https://albertmohler.com/2026/05/13/briefing-5-13-26/" target="_blank" rel="noopener">https://albertmohler.com/2026/05/13/briefing-5-13-26/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-13">
+      <div class="src-num">13</div>
+      <div>
+        <div class="src-title">Trump-Xi Summit in Beijing: Managing the World’s Most Important Relationship</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; csis.org
+          &nbsp;·&nbsp; 2026-05-08
+        </div>
+        <div class="src-url"><a href="https://www.csis.org/analysis/trump-xi-summit-beijing-managing-worlds-most-important-relationship" target="_blank" rel="noopener">https://www.csis.org/analysis/trump-xi-summit-beijing-managing-worlds-most-important-relationship</a></div>
+      </div>
+    </li>
+    
+    <li id="src-14">
+      <div class="src-num">14</div>
+      <div>
+        <div class="src-title">At the Trump-Xi Summit, China Will Have the Upper Hand | Council on Foreign Relations</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; cfr.org
+          &nbsp;·&nbsp; 2026-05-10
+        </div>
+        <div class="src-url"><a href="https://www.cfr.org/articles/at-the-trump-xi-summit-china-will-have-the-upper-hand" target="_blank" rel="noopener">https://www.cfr.org/articles/at-the-trump-xi-summit-china-will-have-the-upper-hand</a></div>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+</div><!-- /page-wrap -->
+</body>
+</html>

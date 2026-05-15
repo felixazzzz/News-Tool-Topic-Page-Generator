@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 FIFA World Cup Opening Match at Estadio Azteca</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --color-bg:          #fafaf7;
+  --color-text:        #1a1a1a;
+  --color-text-muted:  #6b6b6b;
+  --color-border:      #e5e5e0;
+  --color-accent:      #8b0000;
+  --color-link:        #8b0000;
+  --color-primary:     #1a5d1a;
+  --color-corroborated:#1d4e89;
+  --color-single:      #8a6d00;
+
+  --font-serif: 'Source Serif Pro', Georgia, serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  --max-width:          720px;
+  --line-height-body:   1.65;
+  --line-height-heading:1.2;
+
+  --size-h1:     2.5rem;
+  --size-h2:     1.75rem;
+  --size-h3:     1.25rem;
+  --size-body:   1.0625rem;
+  --size-small:  0.875rem;
+  --size-caption:0.75rem;
+
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+a { color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+/* ── Top bar ──────────────────────────────────────────────────────────── */
+.topbar {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--size-caption);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+.topbar-brand {
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--size-caption);
+}
+
+/* ── Layout wrapper ───────────────────────────────────────────────────── */
+.page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-2xl);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+.hero-eyebrow .event-type {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.hero h1 {
+  font-size: var(--size-h1);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.01em;
+}
+.hero-rule {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+.hero-summary {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+.hero-meta {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+.hero-meta span + span::before { content: " · "; }
+
+/* ── Section headers ──────────────────────────────────────────────────── */
+.section {
+  margin-top: var(--space-xl);
+}
+.section-header {
+  margin-bottom: var(--space-md);
+}
+.section-header h2 {
+  font-size: var(--size-h2);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+/* ── At-a-glance 5W ──────────────────────────────────────────────────── */
+.five-w-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-lg);
+  margin-top: var(--space-md);
+}
+.five-w-item {}
+.five-w-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+.five-w-text {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+}
+
+/* ── Timeline ─────────────────────────────────────────────────────────── */
+.timeline {
+  margin-top: var(--space-md);
+  position: relative;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 6rem 1.25rem 1fr;
+  gap: 0 var(--space-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+.timeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.timeline-line {
+  width: 1px;
+  background: var(--color-border);
+  flex: 1;
+  margin-top: 2px;
+}
+.timeline-item:last-child .timeline-line { display: none; }
+.timeline-content {}
+.timeline-title {
+  font-weight: 600;
+  font-size: var(--size-body);
+  margin-bottom: var(--space-xs);
+}
+.timeline-desc {
+  font-size: var(--size-small);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+}
+
+/* ── Credibility dot + label ──────────────────────────────────────────── */
+.cred {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  margin-left: var(--space-sm);
+  font-weight: 400;
+}
+.cred-primary     { color: var(--color-primary); }
+.cred-corroborated{ color: var(--color-corroborated); }
+.cred-single      { color: var(--color-single); }
+.cred-low         { color: var(--color-text-muted); }
+
+/* ── Source superscripts ──────────────────────────────────────────────── */
+sup.src-ref {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: -0.02em;
+  margin-left: 1px;
+}
+sup.src-ref a {
+  color: inherit;
+  text-decoration: none;
+}
+sup.src-ref a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ── Version comparison table ────────────────────────────────────────── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.comparison-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.comparison-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table .col-attr {
+  font-weight: 600;
+  width: 38%;
+  color: var(--color-text);
+}
+.comparison-table .col-prev {
+  width: 28%;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+}
+.comparison-table .col-new {
+  width: 28%;
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text);
+}
+.comparison-table .col-src {
+  width: 6%;
+  text-align: right;
+}
+
+/* ── Reception ────────────────────────────────────────────────────────── */
+.reception-group {
+  margin-top: var(--space-md);
+}
+.reception-group-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+.reception-item {
+  border-left: 4px solid var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.reception-item.positive { border-left-color: var(--color-primary); }
+.reception-item.critical { border-left-color: var(--color-accent); }
+.reception-group-label.positive { color: var(--color-primary); }
+.reception-group-label.critical { color: var(--color-accent); }
+.reception-quote {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+}
+.reception-attribution {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+.reception-attribution::before { content: "— "; }
+
+/* ── Schedule table ──────────────────────────────────────────────────── */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  margin-top: var(--space-md);
+}
+.schedule-table th {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.schedule-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.schedule-table tr:last-child td { border-bottom: none; }
+.schedule-table .col-date {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  width: 18%;
+  white-space: nowrap;
+}
+.schedule-table .col-title { font-weight: 600; width: 55%; }
+.schedule-table .col-venue { color: var(--color-text-muted); width: 21%; }
+.schedule-table .col-src   { width: 6%; text-align: right; }
+
+/* ── Participants chips ──────────────────────────────────────────────── */
+.participants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.participant-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--size-small);
+}
+.participant-chip-name {
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+.participant-chip-role {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ── Live status ─────────────────────────────────────────────────────── */
+.live-status-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--size-small);
+}
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.live-status-text { font-weight: 500; }
+.live-update { color: var(--color-text-muted); }
+
+/* ── Background prose ────────────────────────────────────────────────── */
+.background-prose p {
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  margin-top: var(--space-md);
+}
+.background-prose p:first-child { margin-top: var(--space-md); }
+
+/* ── Key entities chips ──────────────────────────────────────────────── */
+.entities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.entity-chip {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  max-width: 340px;
+}
+.entity-chip-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: 2px;
+}
+.entity-chip-name { font-weight: 600; font-size: var(--size-small); }
+.entity-chip-type {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.entity-chip-desc {
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Sources list ────────────────────────────────────────────────────── */
+.sources-list {
+  list-style: none;
+  margin-top: var(--space-md);
+}
+.sources-list li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--size-small);
+}
+.sources-list li:last-child { border-bottom: none; }
+.src-num {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  padding-top: 2px;
+  text-align: right;
+}
+.src-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.src-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+.src-tier { display: inline; }
+.src-url {
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  word-break: break-all;
+  color: var(--color-text-muted);
+}
+.src-url a { color: var(--color-link); }
+
+/* ── Tier labels — primary source gets semantic green; media tiers muted ── */
+.tier-primary      { color: var(--color-primary); }
+.tier-tier1        { color: var(--color-text-muted); }
+.tier-tier2        { color: var(--color-text-muted); }
+.tier-tier3        { color: var(--color-text-muted); }
+.tier-low          { color: var(--color-text-muted); }
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .page-wrap { padding: 0 var(--space-md) var(--space-xl); }
+
+  .hero h1 { font-size: 1.75rem; }
+  .hero-summary { font-size: 1rem; }
+
+  .five-w-grid { grid-template-columns: 1fr; }
+
+  .timeline-item { grid-template-columns: 5rem 1.25rem 1fr; }
+  .timeline-date { font-size: var(--size-caption); }
+
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-xs) var(--space-sm); }
+  .comparison-table .col-prev { display: none; }
+  .comparison-table .col-attr { width: 55%; }
+  .comparison-table .col-new  { width: 38%; }
+
+  .section-header h2 { font-size: 1.375rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="topbar">
+  <span class="topbar-brand">Topic Page Generator</span>
+  <span>Generated May 15, 2026 04:31 UTC &nbsp;·&nbsp; v0.1.0</span>
+</header>
+
+<div class="page-wrap">
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <p class="hero-eyebrow">
+    <span class="event-type">SPORTS EVENT</span>
+    &nbsp;·&nbsp; JUNE 11, 2026
+  </p>
+  <h1>2026 FIFA World Cup Opens at Estadio Azteca with Mexico vs. South Africa on June 11</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-summary">The 2026 FIFA World Cup kicks off on Thursday, June 11, 2026, when Mexico faces South Africa at Estadio Azteca (also known as Estadio Banorte) in Mexico City — making it the first stadium ever to host a FIFA World Cup opening match three times. The tournament, co-hosted by Mexico, Canada, and the United States, will feature 48 teams competing across 104 matches in 16 stadiums, with the final scheduled for July 19 in New York/New Jersey. For the first time in World Cup history, three separate opening ceremonies will be held, one in each host country.</p>
+  <p class="hero-meta">
+    <span>May 15, 2026 04:31 UTC</span>
+    <span>Compiled from 13 sources</span>
+  </p>
+</section>
+
+<!-- ── At-a-glance ──────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>At a Glance</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="five-w-grid">
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHO</div>
+      <div class="five-w-text">Mexico will face South Africa in the opening match, with FIFA overseeing the tournament co-hosted by Mexico, Canada, and the United States.<sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHAT</div>
+      <div class="five-w-text">The opening match of the 2026 FIFA World Cup, the first World Cup to feature 48 teams and 104 matches, kicks off at Estadio Azteca — the only stadium to host three FIFA World Cup opening matches.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHEN</div>
+      <div class="five-w-text">Thursday, June 11, 2026, at 3:00 p.m. EST, with the tournament final scheduled for July 19, 2026.<sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHERE</div>
+      <div class="five-w-text">Estadio Azteca (currently named Estadio Banorte), located in Mexico City, Mexico, with a tournament capacity of approximately 83,000.<sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+    </div>
+    
+    
+    <div class="five-w-item">
+      <div class="five-w-label">WHY</div>
+      <div class="five-w-text">Mexico, as one of three co-host nations, is guaranteed to play its group-stage matches on home soil, with the opening match serving as the global curtain-raiser for the most inclusive FIFA World Cup ever staged.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ── Timeline ─────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Timeline</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-date">December 2022</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          FIFA Council Approves FIFA Series<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-5">[5]</a></sup>
+        </div>
+        <div class="timeline-desc">The FIFA Council approved the FIFA Series in December 2022, a new international friendly competition designed to facilitate meaningful matches between national teams from different confederations ahead of the 2026 World Cup cycle.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">March 2025</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Estadio Azteca Naming Rights Deal Signed<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup>
+        </div>
+        <div class="timeline-desc">Estadio Azteca entered a naming rights agreement and is currently known as Estadio Banorte, though it retains its historic identity for World Cup purposes.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">January 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          FIFA World Cup 26 Group Composition Confirmed<span class="cred cred-single">● single source</span><sup class="src-ref"><a href="#src-5">[5]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">The composition of the World Cup groups was confirmed in January 2026. Mexico was drawn into Group A alongside South Africa, South Korea, and Czechia.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">March–April 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          FIFA Series 2026 Warm-Up Matches<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-5">[5]</a></sup>
+        </div>
+        <div class="timeline-desc">Forty-eight national teams from all six FIFA confederations competed in FIFA Series 2026 international friendly matches during the March and April international match window, serving as final preparation ahead of the World Cup.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">June 11, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Opening Match: Mexico vs. South Africa at Estadio Azteca<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup>
+        </div>
+        <div class="timeline-desc">Mexico faces South Africa at 3:00 p.m. EST at Estadio Azteca in Mexico City, officially opening the 2026 FIFA World Cup. An opening ceremony featuring performances from Alejandro Fernández, Belinda, Danny Ocean, J Balvin, Lila Downs, Los Ángeles Azules, Maná, and Tyla will begin 90 minutes before kickoff.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">June 12, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Host Nations USA and Canada Open Their Campaigns<span class="cred cred-single">● single source</span><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup>
+        </div>
+        <div class="timeline-desc">The United States faces Paraguay at 9 p.m. EST in Los Angeles, while Canada faces Bosnia and Herzegovina at 3 p.m. EST in Toronto — each preceded by their own opening ceremonies.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">June 17, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Estadio Azteca Hosts Group K: Uzbekistan vs. Colombia<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup>
+        </div>
+        <div class="timeline-desc">Estadio Azteca stages its second group-stage match of the tournament, with Uzbekistan taking on Colombia at 8:00 p.m. local time in Group K.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">June 18, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Mexico vs. South Korea in Guadalajara<span class="cred cred-single">● single source</span><sup class="src-ref"><a href="#src-6">[6]</a></sup>
+        </div>
+        <div class="timeline-desc">Mexico plays their second group-stage match against South Korea on June 18 at Estadio Akron in Guadalajara.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">June 24, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Mexico vs. Czech Republic at Estadio Azteca<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup>
+        </div>
+        <div class="timeline-desc">Mexico concludes their group-stage campaign against Czech Republic at Estadio Azteca. According to one source, the match is scheduled at 7:00 p.m. local time; according to another report, it will air at 9 p.m. ET on FOX/Telemundo.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">June 30, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Round of 32 at Estadio Azteca<span class="cred cred-corroborated">● corroborated</span><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup>
+        </div>
+        <div class="timeline-desc">Estadio Azteca hosts a Round of 32 knockout match between the Group A winner and a third-place finisher from Groups C, E, F, H, or I. According to one source, the match is at 9 p.m. ET; according to another, it is at 11:00 p.m. local time.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">July 5, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          Round of 16 at Estadio Azteca<span class="cred cred-single">● single source</span><sup class="src-ref"><a href="#src-12">[12]</a></sup>
+        </div>
+        <div class="timeline-desc">Estadio Azteca hosts a Round of 16 match at 6:00 p.m. local time.</div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-date">July 19, 2026</div>
+      <div class="timeline-spine">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-title">
+          FIFA World Cup 2026 Final in New York/New Jersey<span class="cred cred-primary">● primary</span><sup class="src-ref"><a href="#src-1">[1]</a></sup>
+        </div>
+        <div class="timeline-desc">The FIFA World Cup 26 final is scheduled for Sunday, July 19, 2026, in New York/New Jersey, bringing the tournament to a close.</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- ── Version Comparison ────────────────────────────────────────────── -->
+
+
+<!-- ── Reception ─────────────────────────────────────────────────────── -->
+
+
+<!-- ── Schedule ──────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Schedule</h2>
+    <hr class="section-divider">
+  </div>
+  
+  
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th class="col-date">Date</th>
+        <th class="col-title">Event</th>
+        
+        <th class="col-src">Src</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="col-date">June 11, 2026</td>
+        <td class="col-title">Opening Match: Mexico vs. South Africa</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">June 12, 2026</td>
+        <td class="col-title">Canada vs. Bosnia and Herzegovina (Toronto) &amp; USA vs. Paraguay (Los Angeles)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">June 17, 2026</td>
+        <td class="col-title">Group K: Uzbekistan vs. Colombia at Estadio Azteca</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">June 18, 2026</td>
+        <td class="col-title">Group A: Mexico vs. South Korea (Guadalajara)</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-6">[6]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">June 24, 2026</td>
+        <td class="col-title">Group A: Czech Republic vs. Mexico at Estadio Azteca</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">June 30, 2026</td>
+        <td class="col-title">Round of 32 at Estadio Azteca</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-13">[13]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">July 5, 2026</td>
+        <td class="col-title">Round of 16 at Estadio Azteca</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-12">[12]</a></sup></td>
+      </tr>
+      
+      <tr>
+        <td class="col-date">July 19, 2026</td>
+        <td class="col-title">FIFA World Cup 2026 Final — New York/New Jersey</td>
+        
+        <td class="col-src"><sup class="src-ref"><a href="#src-1">[1]</a></sup></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ── Participants ───────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Participants</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="participants-grid">
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Mexico National Football Team<sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+      <div class="participant-chip-role">Host nation &amp; opening match participant (Group A)</div>
+      
+      <div class="entity-chip-desc">Ranked No. 15 in the world, Mexico is guaranteed to play all three group-stage matches on home soil. They face South Africa (June 11, Mexico City), South Korea (June 18, Guadalajara), and Czech Republic (June 24, Mexico City).</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">South Africa National Football Team<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+      <div class="participant-chip-role">Opening match opponent (Group A)</div>
+      
+      <div class="entity-chip-desc">South Africa faces Mexico in the tournament&#39;s opening match on June 11 at Estadio Azteca.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">South Korea National Football Team<sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+      <div class="participant-chip-role">Group A participant</div>
+      
+      <div class="entity-chip-desc">South Korea is drawn into Group A and will face Mexico on June 18 at Estadio Akron in Guadalajara.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Czechia (Czech Republic) National Football Team<sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup></div>
+      <div class="participant-chip-role">Group A participant</div>
+      
+      <div class="entity-chip-desc">Czechia is drawn into Group A and will face Mexico on June 24 at Estadio Azteca in Mexico City.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Gianni Infantino<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup></div>
+      <div class="participant-chip-role">FIFA President</div>
+      
+      <div class="entity-chip-desc">Attended the reopening of Estadio Azteca and has been a prominent spokesperson for the 2026 World Cup, calling it &#39;the most inclusive and impactful FIFA World Cup ever.&#39;</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">Victor Montagliani<sup class="src-ref"><a href="#src-1">[1]</a></sup></div>
+      <div class="participant-chip-role">FIFA Vice-President and Concacaf President</div>
+      
+      <div class="entity-chip-desc">Described the FIFA World Cup 2026 as &#39;a watershed moment&#39; that will trigger massive football development in the region and worldwide.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">On Location<sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+      <div class="participant-chip-role">Official Hospitality Provider of FIFA World Cup 2026</div>
+      
+      <div class="entity-chip-desc">Manages all premium hospitality packages at Estadio Azteca, including Private Suites, Pitchside Lounges, VIP Lounges, Trophy Lounges, Champions Clubs, and FIFA Pavilions.</div>
+      
+    </div>
+    
+    <div class="participant-chip">
+      <div class="participant-chip-name">FIFA Collect<sup class="src-ref"><a href="#src-3">[3]</a></sup></div>
+      <div class="participant-chip-role">Official digital collectibles platform offering World Cup ticket access</div>
+      
+      <div class="entity-chip-desc">FIFA Collect is offering 1,000 exclusive &#39;Right to Buy&#39; tickets for FIFA World Cup 2026, including an Exclusive Glory Pack (115 available at $999 each) that secures a right to purchase tickets for the June 11 opening match at Estadio Azteca.</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ── Live Status ───────────────────────────────────────────────────── -->
+
+
+<!-- ── Background ────────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Background</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="background-prose">
+    
+    <p>Estadio Azteca — currently operating under a naming rights deal as Estadio Banorte — is the most storied football venue in the Americas and the only stadium in history to host three FIFA World Cups. Opened in 1966 and located in the Coyoacán district of Mexico City at an altitude of 2,200 metres, the stadium previously hosted the 1970 and 1986 FIFA World Cup finals. The 1970 final saw 100,000 fans watch Brazil defeat Italy 4-1, with Pelé playing his third and final World Cup. In 1986, Diego Maradona orchestrated Argentina&#39;s 3-2 victory over West Germany in the final, having already scored the famous &#39;Goal of the Century&#39; against England in the quarter-finals at the same venue.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup></p>
+    
+    <p>Ahead of the 2026 tournament, Estadio Azteca has undergone its first major renovation since its inauguration. The redevelopment — costing around 2 billion Mexican pesos (approximately €110 million) — focused on fan experience, sustainability, and pitch quality. Upgrades include a new roof with photovoltaic panels, full LED lighting on the exterior, high-resolution LED screens throughout the bowl, a hybrid playing surface at FIFA regulation size, new player changing rooms and tunnel, and replaced seating for improved comfort and sightlines. The original stadium silhouette has been preserved but with lighter, more modern materials. The stadium has a tournament capacity of approximately 83,000 and is renowned for its acoustics, with the bowl design trapping and amplifying crowd noise.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup></p>
+    
+    <p>The 2026 FIFA World Cup is the largest in the tournament&#39;s history, featuring 48 national teams competing across 104 matches in 16 stadiums spread across Canada, Mexico, and the United States. For the first time, three opening ceremonies will be held — one in each host country. The innovative match schedule is designed to minimise travel for teams and fans, with matches grouped into regionalised east, central, and west zones, and a minimum of three days&#39; rest between fixtures for teams in 103 of the 104 matches. Canada, Mexico, and the United States are each guaranteed to play their three group-stage matches on home soil. The tournament final is scheduled for July 19, 2026, in New York/New Jersey.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup></p>
+    
+  </div>
+</section>
+
+
+<!-- ── Key Entities ──────────────────────────────────────────────────── -->
+
+<section class="section">
+  <div class="section-header">
+    <h2>Key Entities</h2>
+    <hr class="section-divider">
+  </div>
+  <div class="entities-grid">
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Estadio Azteca (Estadio Banorte)</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">Located at Calzada de Tlalpan 3465 in Mexico City&#39;s Coyoacán district, Estadio Azteca is the only stadium to have hosted three FIFA World Cups (1970, 1986, and 2026). It has a tournament capacity of approximately 83,000 and sits at 2,200 metres altitude. Currently operating under a naming rights deal as Estadio Banorte, the venue has undergone major renovations for 2026 including a new roof with photovoltaic panels, LED lighting, a hybrid playing surface, new player tunnel, and replaced seating.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-12">[12]</a></sup><sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">FIFA</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">The international governing body of football, FIFA is the organiser of the 2026 FIFA World Cup. FIFA President Gianni Infantino has described the tournament as &#39;the most inclusive and impactful FIFA World Cup ever,&#39; featuring 48 teams for the first time.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Mexico National Football Team</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">Mexico is one of three co-host nations and will play the tournament&#39;s opening match against South Africa on June 11 at Estadio Azteca. Drawn into Group A alongside South Africa, South Korea, and Czechia, Mexico is guaranteed to play all three group-stage matches on home soil and is currently ranked No. 15 in the world.<sup class="src-ref"><a href="#src-6">[6]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">South Africa National Football Team</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">South Africa is Mexico&#39;s opponent in the 2026 FIFA World Cup opening match on June 11 at Estadio Azteca, competing together in Group A.<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Gianni Infantino</span>
+        <span class="entity-chip-type">person</span>
+      </div>
+      <div class="entity-chip-desc">FIFA President who attended the reopening of Estadio Azteca and the Mexico vs. Portugal friendly. He has called the 2026 World Cup &#39;the most inclusive and impactful FIFA World Cup ever&#39; and stated that &#39;The FIFA World Cup is a moment the world shares, and that begins with how we open it.&#39;<sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-9">[9]</a></sup><sup class="src-ref"><a href="#src-1">[1]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">Mexico City</span>
+        <span class="entity-chip-type">location</span>
+      </div>
+      <div class="entity-chip-desc">One of three Mexican host cities for the 2026 FIFA World Cup alongside Guadalajara and Monterrey. All five World Cup matches in Mexico City will be played at Estadio Azteca. The city sits at 2,200 metres altitude and is served by an extensive public transport network including Metro, Metrobús, and the Tren Ligero line with a dedicated stop at the stadium.<sup class="src-ref"><a href="#src-10">[10]</a></sup><sup class="src-ref"><a href="#src-7">[7]</a></sup><sup class="src-ref"><a href="#src-11">[11]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">On Location</span>
+        <span class="entity-chip-type">organization</span>
+      </div>
+      <div class="entity-chip-desc">The Official Hospitality Provider of FIFA World Cup 2026, responsible for managing premium hospitality packages at Estadio Azteca and other venues, including Pitchside Lounges, VIP Lounges, Trophy Lounges, Champions Clubs, Private Suites, and FIFA Pavilions.<sup class="src-ref"><a href="#src-4">[4]</a></sup></div>
+    </div>
+    
+    <div class="entity-chip">
+      <div class="entity-chip-header">
+        <span class="entity-chip-name">2026 FIFA World Cup</span>
+        <span class="entity-chip-type">event</span>
+      </div>
+      <div class="entity-chip-desc">The 2026 FIFA World Cup is co-hosted by Canada, Mexico, and the United States, featuring 48 national teams competing across 104 matches in 16 stadiums — the largest World Cup in history. The tournament runs from June 11 to July 19, 2026, with the final held in New York/New Jersey.<sup class="src-ref"><a href="#src-1">[1]</a></sup><sup class="src-ref"><a href="#src-2">[2]</a></sup><sup class="src-ref"><a href="#src-6">[6]</a></sup></div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ── Sources ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-header">
+    <h2>Sources</h2>
+    <hr class="section-divider">
+  </div>
+  <ol class="sources-list">
+    
+    <li id="src-1">
+      <div class="src-num">1</div>
+      <div>
+        <div class="src-title">FIFA World Cup 26™ final to be held in New York New Jersey, Mexico City to host historic opening match as schedule revealed</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; fifa.com
+          &nbsp;·&nbsp; 2024-02-06
+        </div>
+        <div class="src-url"><a href="https://inside.fifa.com/media-releases/fifa-world-cup-26-tm-final-to-be-held-in-new-york-new-jersey-mexico-city-to" target="_blank" rel="noopener">https://inside.fifa.com/media-releases/fifa-world-cup-26-tm-final-to-be-held-in-new-york-new-jersey-mexico-city-to</a></div>
+      </div>
+    </li>
+    
+    <li id="src-2">
+      <div class="src-num">2</div>
+      <div>
+        <div class="src-title">FIFA President attends re-opening of Mexico City Stadium</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; fifa.com
+          &nbsp;·&nbsp; 2023-11-27
+        </div>
+        <div class="src-url"><a href="https://inside.fifa.com/news/mexico-city-stadium-azteca-pele-diego-maradona-world-cup-2026" target="_blank" rel="noopener">https://inside.fifa.com/news/mexico-city-stadium-azteca-pele-diego-maradona-world-cup-2026</a></div>
+      </div>
+    </li>
+    
+    <li id="src-3">
+      <div class="src-num">3</div>
+      <div>
+        <div class="src-title">From &#39;94 Legend to 2026 Spectator</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; fifa.com
+          &nbsp;·&nbsp; 2026-01-01
+        </div>
+        <div class="src-url"><a href="https://collect.fifa.com/pages/usa-94" target="_blank" rel="noopener">https://collect.fifa.com/pages/usa-94</a></div>
+      </div>
+    </li>
+    
+    <li id="src-4">
+      <div class="src-num">4</div>
+      <div>
+        <div class="src-title">Mexico City</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; fifa.com
+          &nbsp;·&nbsp; 2025-01-01
+        </div>
+        <div class="src-url"><a href="https://fifaworldcup26.hospitality.fifa.com/know-before-you-go/mexico-city" target="_blank" rel="noopener">https://fifaworldcup26.hospitality.fifa.com/know-before-you-go/mexico-city</a></div>
+      </div>
+    </li>
+    
+    <li id="src-5">
+      <div class="src-num">5</div>
+      <div>
+        <div class="src-title">FIFA Series 2026™ match schedule now available</div>
+        <div class="src-meta">
+          <span class="tier-primary src-tier">● Primary source</span>
+          &nbsp;·&nbsp; fifa.com
+          &nbsp;·&nbsp; 2023-11-27
+        </div>
+        <div class="src-url"><a href="https://inside.fifa.com/media-releases/fifa-series-2026-match-schedule-now-available" target="_blank" rel="noopener">https://inside.fifa.com/media-releases/fifa-series-2026-match-schedule-now-available</a></div>
+      </div>
+    </li>
+    
+    <li id="src-6">
+      <div class="src-num">6</div>
+      <div>
+        <div class="src-title">Mexico 2026 World Cup tickets, game locations, TV schedule and more</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; usatoday.com
+          &nbsp;·&nbsp; 2026-04-22
+        </div>
+        <div class="src-url"><a href="https://www.usatoday.com/story/shopping/sports/tickets/2026/04/22/mexico-world-cup-soccer-tickets-schedule-game-locations-tv-channel/89732488007/" target="_blank" rel="noopener">https://www.usatoday.com/story/shopping/sports/tickets/2026/04/22/mexico-world-cup-soccer-tickets-schedule-game-locations-tv-channel/89732488007/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-7">
+      <div class="src-num">7</div>
+      <div>
+        <div class="src-title">2026 World Cup Matches in Mexico City: Start Times, Dates, Locations</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; foxsports.com
+          &nbsp;·&nbsp; 2025-12-07
+        </div>
+        <div class="src-url"><a href="https://www.foxsports.com/stories/soccer/2026-world-cup-matches-mexico-city-start-times-dates-locations" target="_blank" rel="noopener">https://www.foxsports.com/stories/soccer/2026-world-cup-matches-mexico-city-start-times-dates-locations</a></div>
+      </div>
+    </li>
+    
+    <li id="src-8">
+      <div class="src-num">8</div>
+      <div>
+        <div class="src-title">Mexico vs South Africa | Match 1 Group A | World Cup 2026 Tickets - Jun 11, 2026</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; seatpick.com
+          &nbsp;·&nbsp; 2025-02-27
+        </div>
+        <div class="src-url"><a href="https://seatpick.com/mexico-vs-tbd-football-world-cup-tickets/event/321740" target="_blank" rel="noopener">https://seatpick.com/mexico-vs-tbd-football-world-cup-tickets/event/321740</a></div>
+      </div>
+    </li>
+    
+    <li id="src-9">
+      <div class="src-num">9</div>
+      <div>
+        <div class="src-title">Opening ceremonies announced for 2026 FIFA World Cup</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; sports.yahoo.com
+          &nbsp;·&nbsp; 2026-05-11
+        </div>
+        <div class="src-url"><a href="https://sports.yahoo.com/articles/opening-ceremonies-announced-2026-fifa-183256154.html" target="_blank" rel="noopener">https://sports.yahoo.com/articles/opening-ceremonies-announced-2026-fifa-183256154.html</a></div>
+      </div>
+    </li>
+    
+    <li id="src-10">
+      <div class="src-num">10</div>
+      <div>
+        <div class="src-title">Estadio Azteca Guide | Seating, Parking &amp; World Cup 2026 Access</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; xeniaevents.com
+          &nbsp;·&nbsp; 2026-04-23
+        </div>
+        <div class="src-url"><a href="https://xeniaevents.com/estadio-azteca-mexico-city/" target="_blank" rel="noopener">https://xeniaevents.com/estadio-azteca-mexico-city/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-11">
+      <div class="src-num">11</div>
+      <div>
+        <div class="src-title">Estadio Azteca Guide (Mexico City) | Sports Planning Guide</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; sportsplanningguide.com
+          &nbsp;·&nbsp; 2025-09-25
+        </div>
+        <div class="src-url"><a href="https://sportsplanningguide.com/world-cup-2026/estadio-azteca-guide-mexico-city/" target="_blank" rel="noopener">https://sportsplanningguide.com/world-cup-2026/estadio-azteca-guide-mexico-city/</a></div>
+      </div>
+    </li>
+    
+    <li id="src-12">
+      <div class="src-num">12</div>
+      <div>
+        <div class="src-title">World Cup 2026: Mexico City Stadium</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; stadiumdb.com
+          &nbsp;·&nbsp; 2018-06-14
+        </div>
+        <div class="src-url"><a href="https://stadiumdb.com/tournaments/world_cup/2026/estadio_azteca" target="_blank" rel="noopener">https://stadiumdb.com/tournaments/world_cup/2026/estadio_azteca</a></div>
+      </div>
+    </li>
+    
+    <li id="src-13">
+      <div class="src-num">13</div>
+      <div>
+        <div class="src-title">Estadio Azteca</div>
+        <div class="src-meta">
+          <span class="tier-tier3 src-tier">● Tier-3 media</span>
+          &nbsp;·&nbsp; ticombo.com
+          &nbsp;·&nbsp; 2026-05-14
+        </div>
+        <div class="src-url"><a href="https://www.ticombo.com/en/world-cup-2026/stadiums/mexico-city-stadium" target="_blank" rel="noopener">https://www.ticombo.com/en/world-cup-2026/stadiums/mexico-city-stadium</a></div>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+</div><!-- /page-wrap -->
+</body>
+</html>
